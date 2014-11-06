@@ -9,7 +9,7 @@ namespace :evil_icons do
   desc "Generate SVG icons sprite"
   task :process do
     generator = EvilIcons::Generator.new(svg_path)
-    generator.write(res_path)
+    generator.write_svg(res_path)
   end
 
 end
