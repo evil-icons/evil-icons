@@ -39,14 +39,14 @@ module EvilIcons
       end
     end
 
-    def sprite
-      view  = File.read File.join(@templates_dir, 'icons.erb')
+    def sprite(template)
+      view  = File.read File.join(@templates_dir, "#{template}.erb")
       ERB.new(view).result(binding)
     end
 
-    def write_svg(sprite_path)
+    def write(sprite_path, template)
       file = File.new(sprite_path, 'w')
-      file.write(sprite)
+      file.write sprite(template)
       file.close
     end
 

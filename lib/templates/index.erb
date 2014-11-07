@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evil Icons</title>
+  <link rel="stylesheet" type="text/css" href="doc/assets/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+  <% icons.each do |icon| %>
+    <symbol id='<%= icon[:name] %>-icon' viewBox='<%= icon[:viewbox] %>'>
+      <%= icon[:shape] %>
+    </symbol>
+  <% end %>
+</svg>
+
+
+<h1>Evil Icons</h1>
+
+
+<section class="icons">
+  <div class="sizes">
+    <button class="size-button" data-size="s">S</button>
+    <button class="size-button" data-size="m">M</button>
+    <button class="size-button" data-size="l">L</button>
+  </div>
+
+
+  <% icons.each do |icon| %>
+
+    <figure class="plate">
+      <div class="icon icon--m icon--<%= icon[:name] %>">
+        <svg class="icon__cnt">
+          <use xlink:href="#<%= icon[:name] %>-icon">
+        </svg>
+      </div>
+      <figcaption>
+        <%= icon[:name] %>
+      </figcaption>
+    </figure>
+
+  <% end %>
+</section>
+
+
+<script type="text/javascript">
+
+  $(function(){
+    var icons   = $('.icon');
+    var buttons = $('.size-button');
+
+    buttons.on('click', function() {
+      var modifier = 'icon--' + $(this).data('size');
+
+      $('.icon').removeClass('icon--s icon--m icon--l');
+      $('.icon').addClass(modifier);
+
+      buttons.removeClass('is-active');
+      $(this).addClass('is-active');
+    });
+
+  }());
+
+</script>
+
+</body>
+</html>
+
+

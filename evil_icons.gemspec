@@ -8,12 +8,18 @@ Gem::Specification.new do |spec|
   spec.version       = EvilIcons::VERSION
   spec.authors       = ["Alexander Madyankin"]
   spec.email         = ["alexander@madyankin.name"]
-  spec.summary       = %q{SVG icons for rails.}
-  spec.description   = %q{SVG icons for rails.}
+  spec.summary       = "SVG icons for rails."
+  spec.description   = "SVG icons for rails."
   spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = Dir.glob("{app,lib}/*/**/**") + %w(
+                        evil_icons.gemspec
+                        LICENSE.txt
+                        Rakefile
+                        README.md
+                       )
+
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
