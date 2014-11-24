@@ -17,6 +17,30 @@
 </p>
 <p>Sponsored by <a href="http://evilmartians.com">Evil Martians</a>.</p>
 
+<section class="icons">
+  <div class="sizes">
+    <button class="size-button" data-size="s">S</button>
+    <button class="size-button" data-size="m">M</button>
+    <button class="size-button" data-size="l">L</button>
+  </div>
+
+
+  <% icons.each do |icon| %>
+
+    <figure class="plate">
+      <div class="icon icon--m icon--<%= icon[:name] %>">
+        <svg class="icon__cnt">
+          <use xlink:href="#<%= icon[:name] %>-icon">
+        </svg>
+      </div>
+      <figcaption>
+        <%= icon[:name] %>
+      </figcaption>
+    </figure>
+
+  <% end %>
+</section>
+
 
 <h2>Usage</h2>
 
@@ -63,33 +87,6 @@ Here are some examples:
 <h3>npm</h3>
 
 <h3>bower</h3>
-
-
-
-<section class="icons">
-  <div class="sizes">
-    <button class="size-button" data-size="s">S</button>
-    <button class="size-button" data-size="m">M</button>
-    <button class="size-button" data-size="l">L</button>
-  </div>
-
-
-  <% icons.each do |icon| %>
-
-    <figure class="plate">
-      <div class="icon icon--m icon--<%= icon[:name] %>">
-        <svg class="icon__cnt">
-          <use xlink:href="#<%= icon[:name] %>-icon">
-        </svg>
-      </div>
-      <figcaption>
-        <%= icon[:name] %>
-      </figcaption>
-    </figure>
-
-  <% end %>
-</section>
-
 
 
 <h2>License</h2>
