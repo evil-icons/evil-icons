@@ -6,7 +6,7 @@ require 'evil_icons/version'
 Gem::Specification.new do |spec|
   spec.name          = "evil_icons"
   spec.version       = EvilIcons::VERSION
-  spec.authors       = ["Alexander Madyankin"]
+  spec.authors       = ["Alexander Madyankin", "Roman Shamin"]
   spec.email         = ["alexander@madyankin.name"]
   spec.summary       = "SVG icons for rails."
   spec.description   = "SVG icons for rails."
