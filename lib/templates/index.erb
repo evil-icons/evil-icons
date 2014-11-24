@@ -58,7 +58,7 @@
     var color = 1;
     setInterval(function(){
       icons.css('fill', colors[color]);
-      if (++color == 8) {
+      if (++color == colors.length + 1) {
         color = 0;
       }
     }, 2000);
