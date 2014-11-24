@@ -42,6 +42,7 @@
   $(function(){
     var icons   = $('.icon');
     var buttons = $('.size-button');
+    var colors  = ['#fc331e', '#fdad29', '#fed631', '#6bb220', '#3aa9e1', '#0c3dba', '#df80ec'];
 
     buttons.on('click', function() {
       var modifier = 'icon--' + $(this).data('size');
@@ -52,6 +53,15 @@
       buttons.removeClass('is-active');
       $(this).addClass('is-active');
     });
+
+
+    var color = 1;
+    setInterval(function(){
+      icons.css('fill', colors[color]);
+      if (++color == 8) {
+        color = 0;
+      }
+    }, 2000);
 
   }());
 

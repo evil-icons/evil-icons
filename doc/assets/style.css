@@ -21,7 +21,7 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 100px;
-  margin: 0;
+  margin: 0 0 20px;
   text-align: center;
   font-size: 12px;
   display: inline-block;
@@ -33,6 +33,7 @@ body {
   display: inline-block;
   width: 25px;
   height: 25px;
+  fill: #fc331e;
 }
 
 .icon__cnt {
@@ -40,6 +41,8 @@ body {
   height: 100%;
   background: inherit;
   fill: inherit;
+  -webkit-transition: fill 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         fill 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .icon--m {
