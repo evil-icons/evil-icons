@@ -12,7 +12,22 @@ body {
 }
 
 .sizes {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.size-button {
+  border: none;
+  height: 40px;
+  padding: 0 20px;
+  background: #b5b5b5;
+  display: inline-block;
+  -webkit-transition: all 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         all 100ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.size-button:hover {
+  cursor: pointer;
+  background: #d8d8d8;
 }
 
 
@@ -21,7 +36,7 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 100px;
-  margin: 0 0 20px;
+  margin: 0 20px 20px 0;
   text-align: center;
   font-size: 12px;
   display: inline-block;
