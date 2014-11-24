@@ -22,6 +22,44 @@
 
 <h3>Rails</h3>
 
+<p>Add <code>'evil_icons'</code> gem to your Gemfile:</p>
+<pre>
+  gem 'evil_icons'
+</pre>
+
+<p>Add the evil icons styles to your <code>application.css</code>:</p>
+<pre>
+  /*= require evil-icons */
+</pre>
+
+<p>Render the evil icons sprite in your templates:</p>
+<pre>
+  &lt;%= evil_icons %&gt;
+</pre>
+
+<p>
+After these steps you can render icons using the<code>icon</code> helper.
+Here are some examples:
+</p>
+<pre>
+&lt;%= icon 'ei-search' %&gt;
+&lt;%= icon 'ei-arrow-right', size: :m %&gt;
+&lt;%= icon 'ei-envelope', size: :l %&gt;
+</pre>
+
+<p>
+  An icon's color can be changed in CSS:
+</p>
+<pre>
+.icon {
+  fill: green;
+}
+.icon--ei-facebook {
+  fill: blue;
+}
+</pre>
+
+
 <h3>npm</h3>
 
 <h3>bower</h3>

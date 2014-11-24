@@ -9,6 +9,16 @@ a, a:visited {
   color: #3aa9e1;
 }
 
+code, pre {
+  padding: 0 5px;
+  background: #eee;
+}
+
+pre {
+  max-width: 600px;
+  padding: 5px;
+}
+
 .icons {
   margin: 50px 0;
   font-size: 0;
