@@ -1,9 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
-  <defs>
   <% icons.each do |icon| %>
     <symbol id='<%= icon[:name] %>-icon' viewBox='<%= icon[:viewbox] %>'>
       <%= icon[:shape] %>
     </symbol>
   <% end %>
-  </defs>
 </svg>
