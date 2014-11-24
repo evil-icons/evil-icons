@@ -39,9 +39,14 @@ module EvilIcons
       end
     end
 
+    def optimize(svg)
+      svg.gsub(/$\s+/, '')
+    end
+
     def sprite(template)
-      view  = File.read File.join(@templates_dir, "#{template}.erb")
-      ERB.new(view).result(binding)
+      view    = File.read File.join(@templates_dir, "#{template}.erb")
+      result  = ERB.new(view).result(binding)
+      template == 'icons' ? optimize(result) : result
     end
 
     def write(sprite_path, template)
