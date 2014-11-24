@@ -5,6 +5,9 @@ body {
   font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+a, a:visited {
+  color: #3aa9e1;
+}
 
 .icons {
   margin: 50px 0;
