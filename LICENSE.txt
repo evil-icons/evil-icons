@@ -1,4 +1,4 @@
-Copyright (c) 2014 Alexander Madyankin
+Copyright (c) 2014 Alexander Madyankin <alexander@madyankin.name>, Roman Shamin
 
 MIT License
 
