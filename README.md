@@ -1,6 +1,6 @@
 # Evil Icons
 
-Evil Icons is a set of SVG icons designed extensively for using in modern web projects. You can use it as-is, or try a Ruby gem (for Ruby on Rails) or an npm package.
+Evil Icons is a set of SVG icons designed extensively for using in modern web projects. You can use it as-is, or try a Ruby gem (for Ruby on Rails) or a npm package.
 
 Sponsored by [Evil Martians].
 
