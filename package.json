@@ -1,7 +1,7 @@
 {
   "name": "evil-icons",
   "version": "0.1.0",
-  "description": " SVG icons from Evil Martians",
+  "description": "Evil Icons is a set of SVG icons designed extensively for using in modern web projects",
   "main": "evil-icons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = EvilIcons::VERSION
   spec.authors       = ["Alexander Madyankin", "Roman Shamin"]
   spec.email         = ["alexander@madyankin.name"]
-  spec.summary       = "SVG icons for rails."
-  spec.description   = "SVG icons for rails."
-  spec.homepage      = ""
+  spec.summary       = "Evil Icons is a set of SVG icons for modern web projects"
+  spec.description   = "Evil Icons is a set of SVG icons designed extensively for using in modern web projects"
+  spec.homepage      = "https://github.com/outpunk/evil-icons"
   spec.license       = "MIT"
 
   spec.files         = Dir.glob("{app,lib}/*/**/**") + %w(
