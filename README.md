@@ -11,9 +11,9 @@ Sponsored by [Evil Martians].
 
 ### Rails
 
-Add the `'evil-icons'` gem to your Gemfile:
+Add the `'evil_icons'` gem to your Gemfile:
 ```ruby
-gem 'evil-icons'
+gem 'evil_icons'
 ```
 
 Add the evil icons require to your `application.css`:
