@@ -1,6 +1,6 @@
 {
   "name": "evil-icons",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": " SVG icons from Evil Martians",
   "main": "evil-icons.js",
   "scripts": {
