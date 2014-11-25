@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'evil_icons/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "evil_icons"
+  spec.name          = "evil-icons"
   spec.version       = EvilIcons::VERSION
   spec.authors       = ["Alexander Madyankin", "Roman Shamin"]
   spec.email         = ["alexander@madyankin.name"]
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = Dir.glob("{app,lib}/*/**/**") + %w(
-                        evil_icons.gemspec
+                        evil-icons.gemspec
                         LICENSE.txt
                         Rakefile
                         README.md
