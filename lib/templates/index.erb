@@ -14,7 +14,7 @@
 
 <p>
   Evil Icons is an SVG icons set designed for using in web projects.
-  Rails gem, npm package and bower package are available.
+  Rails gem and npm package are available.
 </p>
 <p>Sponsored by <a href="http://evilmartians.com">Evil Martians</a>.</p>
 
@@ -47,19 +47,19 @@
 
 <h3>Rails</h3>
 
-<p>Add <code>'evil_icons'</code> gem to your Gemfile:</p>
+<p>Add the <code>'evil-icons'</code> gem to your Gemfile:</p>
 <pre>
-  gem 'evil-icons'
+gem 'evil-icons'
 </pre>
 
 <p>Add the evil icons styles to your <code>application.css</code>:</p>
 <pre>
-  /*= require evil-icons */
+/*= require evil-icons */
 </pre>
 
 <p>Render the evil icons sprite in your templates:</p>
 <pre>
-  &lt;%= evil_icons %&gt;
+&lt;%= evil_icons %&gt;
 </pre>
 
 <p>
@@ -69,9 +69,62 @@ Here are some examples:
 <pre>
 &lt;%= icon 'ei-search' %&gt;
 &lt;%= icon 'ei-arrow-right', size: :m %&gt;
-&lt;%= icon 'ei-envelope', size: :l %&gt;
+&lt;%= icon 'ei-envelope', size: :l, class: "custom-class" %&gt;
 </pre>
 
+
+<h3>npm</h3>
+<p>Add the<code>'evil-icons'</code> package to your project:</p>
+<pre>
+npm install evil-icons
+</pre>
+
+<p>Add the evil icons styles to your pages:</p>
+<pre>
+&lt;link rel="stylesheet" type="text/css" href="./node_modules/evil-icons/app/assets/stylesheets/evil-icons.css"&gt;
+</pre>
+
+<p>Require `evil-icons` into your javascript</p>
+<pre>
+var icons = require("evil-icons").icons
+</pre>
+
+<p>
+After these steps you can render icons in your page using helpers.
+Here are some examples:
+</p>
+<pre>
+/* A string with SVG sprite */
+icons.sprite;
+
+/* Icons rendering */
+icon("ei-search");
+icon("ei-arrow-right", {size: "m"});
+icon("ei-envelope", {size: "l", class: "custom-class"});
+</pre>
+
+<h3>Styling</h3>
+<p>
+Every icon has the <code>.icon</code> class and its modifier with the icon's name.
+For example, the facebook icon has the <code>.icon--ei-facebook</code> modifier.
+</p>
+<p>
+In addition, an icon may have a size modifier. But we recommend to change the sizes
+using the helper's <code>size</code> parameter. Evil icons have some predefined sizes:
+<code>s</code> (25x25, default), <code>m</code> (50x50), , <code>l</code> (100x100),
+<code>xl</code> (150x150) and <code>xxl</code> (200x200).
+You may want to add more sizes, we recommend to keep the sizes multiple to 50.
+</p>
+<pre>
+icon("ei-arrow-right", {size: "m"})
+</pre>
+<p>
+Also you may want to add a custom class for an icon. You can do this with
+the <code>class</code> parameter:
+</p>
+<pre>
+icon("ei-envelope", {class: "custom-class"})
+</pre>
 <p>
   An icon's color can be changed in CSS:
 </p>
@@ -83,11 +136,6 @@ Here are some examples:
   fill: blue;
 }
 </pre>
-
-
-<h3>npm</h3>
-
-<h3>bower</h3>
 
 
 <h2>License</h2>
