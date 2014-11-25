@@ -1,0 +1,28 @@
+{
+  "name": "evil-icons",
+  "version": "0.0.1",
+  "description": " SVG icons from Evil Martians",
+  "main": "evil-icons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/outpunk/evil-icons.git"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "sprite"
+  ],
+  "author": "Alexander Madyankin <alexander@madyankin.name>",
+  "contributors": [
+    {"name": "Alexander Madyankin"},
+    {"name": "Roman Shamin"},
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outpunk/evil-icons/issues"
+  },
+  "homepage": "https://github.com/outpunk/evil-icons"
+}
