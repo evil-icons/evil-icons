@@ -1,7 +1,23 @@
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+
+
 .icon {
   display: inline-block;
   width: 25px;
   height: 25px;
+  overflow: hidden;
 }
 
 .icon__cnt {
@@ -30,3 +46,11 @@
   width: 200px;
   height: 200px;
 }
+
+.icon--ei-spinner .icon__cnt,
+.icon--ei-spinner-2 .icon__cnt,
+.icon--ei-spinner-3 .icon__cnt {
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+}
+
