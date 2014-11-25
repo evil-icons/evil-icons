@@ -1,0 +1,13 @@
+.git
+.DS_Store
+
+Gemfile
+Gemfile.lock
+evil-icons.gemspec
+index.html
+Rakefile
+
+app/helpers
+doc
+icons-sources
+lib
