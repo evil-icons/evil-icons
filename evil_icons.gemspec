@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = Dir.glob("{app,lib}/*/**/**") + %w(
+                        lib/evil_icons.rb
                         evil_icons.gemspec
                         LICENSE.txt
                         Rakefile
