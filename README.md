@@ -2,9 +2,11 @@
 
 Evil Icons is a set of SVG icons designed extensively for using in modern web projects. You can use it as-is, or try a Ruby gem (for Ruby on Rails) or a npm package.
 
-Sponsored by [Evil Martians].
+Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
-[Evil Martians]: http://evilmartians.com
+[Alexander Madyankin]:  https://github.com/outpunk
+[Roman Shamin]:         https://github.com/romashamin
+[Evil Martians]:        https://evilmartians.com
 
 
 ## Usage
