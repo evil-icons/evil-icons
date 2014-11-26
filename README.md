@@ -92,7 +92,8 @@ An icon's color can be changed in CSS:
 }
 ```
 
-## Todo
+## Roadmap
+* Adding user icons to the sprite
 * Grunt plugin
 * Gulp plugin
 * CDN version
