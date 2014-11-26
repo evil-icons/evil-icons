@@ -90,4 +90,8 @@ An icon's color can be changed in CSS:
 }
 ```
 
+## Todo
+* Grunt plugin
+* Gulp plugin
+* CDN version
 
