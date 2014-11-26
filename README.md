@@ -93,7 +93,8 @@ An icon's color can be changed in CSS:
 ```
 
 ## Roadmap
-* Adding user icons to the sprite
+* Custom icons
+* PSD/AI/Sketch for designers
 * Grunt plugin
 * Gulp plugin
 * CDN version
