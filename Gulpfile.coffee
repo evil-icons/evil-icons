@@ -14,6 +14,7 @@ gutil        = require 'gulp-util'
 del          = require 'del'
 icons        = require 'evil-icons'
 fs           = require 'fs'
+inline       = require('gulp-inline-base64')
 
 iconsPath = './node_modules/evil-icons/app/assets/images/evil-icons'
 iconNames = (icon.replace('.svg', '') for icon in fs.readdirSync iconsPath)
@@ -23,6 +24,7 @@ jadeVars  = {iconNames: iconNames, icons: icons}
 gulp.task 'css', ->
   gulp.src 'src/app.scss'
     .pipe sass()
+    .pipe inline(baseDir: './', debug: true)
     .pipe autoprefixer()
     .pipe cssmin(keepSpecialComments: 0)
     .pipe gulp.dest('assets')
