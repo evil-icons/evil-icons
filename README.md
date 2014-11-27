@@ -25,15 +25,15 @@ Add the evil icons require to your `application.css`:
 
 Next, you have to render the evil-icons sprite in your template (or, in your layout):
 ```erb
-<%= evil_icons %>
+<%= evil_icons_sprite %>
 ```
 
 Finally, you can render the icon using the `icon` helper.
 Here are some examples:
 ```erb
-<%= icon 'ei-search' %>
-<%= icon 'ei-arrow-right', size: :m %>
-<%= icon 'ei-envelope', size: :l, class: "custom-class" %>
+<%= evil_icon 'ei-search' %>
+<%= evil_icon 'ei-arrow-right', size: :m %>
+<%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
 ```
 
 
