@@ -28,9 +28,9 @@ $ ->
 
   if window.devicePixelRatio && devicePixelRatio >= 2
     testElem = $ "<div>",
-      role: 'testElem'
+      id: 'testElem'
       css: { border: ".5px solid transparent" }
 
     $('body').append(testElem)
     $("html").addClass("hairlines") if testElem[0].offsetHeight == 1
-    testElem.remove('@testElem')
+    testElem.remove('#testElem')
