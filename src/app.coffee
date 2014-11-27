@@ -10,8 +10,8 @@ $ ->
   buttons.on 'click', ->
     modifier = "icon--#{$(@).data('size')}"
 
-    $('.icon').removeClass('icon--s icon--m icon--l');
-    $('.icon').addClass(modifier);
+    icons.removeClass('icon--s icon--m icon--l');
+    icons.addClass(modifier);
 
     buttons.removeClass('is-active');
     $(@).addClass('is-active');
