@@ -46,7 +46,6 @@ gulp.task 'images', ->
       svgoPlugins: [{ removeViewBox: false }]
       use: [pngquant()]
     .pipe gulp.dest('assets/images')
-    .pipe connect.reload()
 
 
 gulp.task 'coffee', ->
@@ -58,7 +57,7 @@ gulp.task 'coffee', ->
 
 
 gulp.task 'server', ['watch'], ->
-  connect.server(root: './', livereload: true)
+  connect.server(root: './', livereload: false)
 
 
 gulp.task 'watch', ->
