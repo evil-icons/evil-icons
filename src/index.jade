@@ -4,7 +4,9 @@ html
     title Evil Icons
     link(rel='stylesheet' href='/assets/app.css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+
   body
+    != icons.sprite
 
     h1 Evil Icons
     p
@@ -14,23 +16,16 @@ html
       | Made by Alexander Madyankin and Roman Shamin. Sponsored by
       a(href='http://evilmartians.com') Evil Martians
       | .
+
     section.icons
       .sizes
         button.size-button(data-size='s') S
         button.size-button(data-size='m') M
         button.size-button(data-size='l') L
-      figure.plate
-        .icon.icon--m.icon--ei-archive
-          svg.icon__cnt
-            use(xlink:href='#ei-archive-icon')
-        figcaption
-          | ei-archive
-      figure.plate
-        .icon.icon--m.icon--ei-arrow-down
-          svg.icon__cnt
-            use(xlink:href='#ei-arrow-down-icon')
-        figcaption
-          | ei-arrow-down
 
+      each icon in iconNames
+        figure.plate
+          != icons.icon(icon, {size: 'm'})
+          figcaption= icon
 
 

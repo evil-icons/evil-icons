@@ -13,6 +13,11 @@ uglify       = require 'gulp-uglify'
 gutil        = require 'gulp-util'
 del          = require 'del'
 icons        = require 'evil-icons'
+fs           = require 'fs'
+
+iconsPath = './node_modules/evil-icons/app/assets/images/evil-icons'
+iconNames = (icon.replace('.svg', '') for icon in fs.readdirSync iconsPath)
+jadeVars  = {iconNames: iconNames, icons: icons}
 
 
 gulp.task 'css', ->
@@ -26,7 +31,7 @@ gulp.task 'css', ->
 
 gulp.task 'html', ->
   gulp.src 'src/index.jade'
-    .pipe jade()
+    .pipe jade(locals: jadeVars)
     .pipe minifyHTML()
     .pipe gulp.dest('./')
     .pipe connect.reload()
@@ -51,7 +56,7 @@ gulp.task 'coffee', ->
 
 
 gulp.task 'server', ['watch'], ->
-  connect.server(root: 'build', livereload: true)
+  connect.server(root: './', livereload: true)
 
 
 gulp.task 'watch', ->
