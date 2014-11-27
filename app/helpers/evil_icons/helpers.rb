@@ -1,11 +1,11 @@
 module EvilIcons
   module Helpers
 
-    def evil_icons
+    def evil_icons_sprite
       render "evil_icons/icons"
     end
 
-    def icon(name, options = {})
+    def evil_icon(name, options = {})
       size  = options[:size] ? "icon--#{options[:size]}" : ''
       options[:class] = "icon icon--#{name} #{size} #{options[:class]}"
 
