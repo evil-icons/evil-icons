@@ -51,7 +51,7 @@ Add the evil icons styles to your pages:
 
 Require `evil-icons` in your JavaScript code:
 ```js
-var icons = require("evil-icons").icons
+var icons = require("evil-icons")
 ```
 
 Finally, you can render the icons in your page using helpers.

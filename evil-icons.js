@@ -1,4 +1,4 @@
-exports.icons = {
+module.exports = {
 
   sprite: fs.readFileSync("./app/views/evil_icons/_icons.erb").toString(),
 

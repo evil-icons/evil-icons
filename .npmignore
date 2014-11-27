@@ -2,10 +2,11 @@ CNAME
 .git
 .DS_Store
 npm-debug.log
+*.gem
 
 Gemfile
 Gemfile.lock
-evil-icons.gemspec
+evil_icons.gemspec
 index.html
 Rakefile
 
@@ -13,3 +14,5 @@ app/helpers
 doc
 icons-sources
 lib
+node_modules
+
