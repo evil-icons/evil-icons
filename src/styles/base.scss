@@ -1,0 +1,100 @@
+body {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: $max-width;
+  color: $gray;
+  font: #{$base-font-size}/$base-line-height $base-font;
+
+  &:before {
+    display: block;
+    height: 4px;
+    background: $emerald;
+    content: "";
+  }
+}
+
+
+a, a:visited {
+  color: $emerald;
+  transition: color 100ms $button-easing;
+  .icon__cnt {
+    transition: fill 100ms $button-easing;
+  }
+}
+
+
+a:hover {
+  color: lighten($emerald, 10%);
+}
+
+
+h1, h2, h3 {
+  margin: 0 0 12px;
+  color: $black;
+  text-align: center;
+  font-weight: normal;
+  font-family: $header-font;
+
+  small, sup {
+    font-family: $base-font;
+    letter-spacing: 0;
+  }
+}
+
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  letter-spacing: -3px;
+
+  sup {
+    position: relative;
+    top: -($small-font-size - 1);
+    color: $light-gray;
+    font-size: $small-font-size;
+  }
+}
+
+
+h2 {
+  margin-bottom: 35px;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  letter-spacing: -2px;
+
+  small {
+    margin-top: 10px;
+  }
+}
+
+
+p {
+  margin: 0 0 1em;
+}
+
+
+small {
+  display: block;
+  color: $light-gray;
+  font-size: $small-font-size;
+}
+
+
+a.link {
+  text-decoration: none;
+  color: $gray;
+
+  .icon {
+    vertical-align: -7px;
+    fill: $gray;
+  }
+
+  &:hover {
+    color: $emerald;
+    cursor: pointer;
+
+    .icon {
+      fill: $emerald;
+    }
+  }
+}

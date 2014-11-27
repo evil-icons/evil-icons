@@ -23,7 +23,7 @@ jadeVars  = {iconNames: iconNames, icons: icons}
 
 gulp.task 'css', ->
   gulp.src 'src/app.scss'
-    .pipe sass()
+    .pipe sass().on('error', gutil.log)
     .pipe inline(baseDir: './', debug: true)
     .pipe autoprefixer()
     .pipe cssmin(keepSpecialComments: 0)

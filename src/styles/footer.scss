@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid $pale-gray;
+  padding: 45px 0;
+  font-size: $small-font-size;
+  text-align: center;
+  color: $light-gray;
+
+  .hairlines & {
+    border-top-width: 0.5px;
+  }
+
+  .icon {
+    vertical-align: -7px;
+  }
+}

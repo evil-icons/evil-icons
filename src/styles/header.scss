@@ -1,0 +1,13 @@
+.header {
+  margin: 60px 0 100px;
+  text-align: center;
+}
+
+.header__btn {
+  display: inline-block;
+  margin: 0 10px;
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}

@@ -2,30 +2,83 @@ doctype html
 html
   head
     title Evil Icons
-    link(rel='stylesheet' href='/assets/app.css')
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    link(rel="stylesheet" href="/assets/app.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="/assets/app.js" defer)
 
   body
     != icons.sprite
 
-    h1 Evil Icons
-    p
-      a(href='https://github.com/outpunk/evil-icons') Evil Icons
-      | is a set of SVG icons designed extensively for using in modern web projects. You can use it as-is, or try a Ruby gem (for Ruby on Rails) or an npm package.
-    p
-      | Made by Alexander Madyankin and Roman Shamin. Sponsored by
-      a(href='http://evilmartians.com') Evil Martians
-      | .
+    header.header
+      h1
+        | Evil Icons
+        sup v.1.0.1
+      p Lightweight SVG icons for your web project
 
-    section.icons
-      .sizes
-        button.size-button(data-size='s') S
-        button.size-button(data-size='m') M
-        button.size-button(data-size='l') L
+      .header__btn
+        a.btn.btn--accent(href="https://github.com/outpunk/evil-icons#evil-icons") Getting Started
+        small Install guide for developers
+
+      .header__btn
+        a.btn(href="https://github.com/outpunk/evil-icons/raw/master/icons-sources/ei.ai") Download Icons
+        small .ai file for designers
+
+
+    h2
+      | Regular Style
+      small Copy and paste the names to your code
+
+    article.icons
+      .icons__switch
+        button.icons__btn.btn(data-size="s") S
+        button.icons__btn.btn.is-active(data-size="m") M
+        button.icons__btn.btn(data-size="l") L
 
       each icon in iconNames
-        figure.plate
-          != icons.icon(icon, {size: 'm'})
+        figure.icons__plate
+          != icons.icon(icon, {size: "m"})
           figcaption= icon
 
+
+    h2 Free & Open
+
+    article.about
+      p
+        | A&nbsp;lot of&nbsp;tools we&nbsp;are using for daily job are based on&nbsp;open-source technologies.
+        | For&nbsp;us, it&nbsp;is&nbsp;vital to&nbsp;be&nbsp;a&nbsp;part of&nbsp;the community,
+        | to&nbsp;participate in&nbsp;the open source movement and to&nbsp;give back as&nbsp;well
+        | as&nbsp;to&nbsp;start new projects. That is&nbsp;why Evil Icons is&nbsp;completely free.
+
+      //- p Support us:
+
+      figure.about__person
+        a.link(href="https://twitter.com/outpunk")
+          img(src="/assets/images/sasha.jpg")
+          figcaption Alexander Madyankin
+
+      figure.about__person
+        a.link(href="https://twitter.com/romanshamin")
+          img(src="/assets/images/roma.jpg")
+          figcaption Roman Shamin
+
+      a.link.about__sponsor
+        p Sponsored by Evil&nbsp;Martians
+        .about__em
+
+
+    footer.footer
+      p Evil Icons licensed under MIT License
+      a.link(href="https://github.com/outpunk/evil-icons")
+        | GitHub Repo
+        != icons.icon("ei-external-link")
+
+
+  script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57143070-1', 'auto');
+    ga('send', 'pageview');
 

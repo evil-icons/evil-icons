@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 30px;
+  height: 60px;
+  border: 1px solid $light-gray;
+  border-radius: $border-radius;
+  background: transparent;
+  color: $gray;
+  text-decoration: none;
+  font-size: $base-font-size;
+  line-height: 60px;
+  transition: all 200ms $button-easing;
+  -webkit-transform: translateZ(0);
+
+  &:visited {
+    color: $gray;
+  }
+
+  &:hover, &:hover:visited {
+    border-color: lighten($emerald, 10%);
+    color: lighten($emerald, 10%);
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .hairlines & {
+    border-width: 0.5px;
+  }
+}
+
+.btn--accent, .btn--accent:visited, .btn:active, .btn.is-active {
+  border-color: $emerald;
+  color: $emerald;
+}

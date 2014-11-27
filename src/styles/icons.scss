@@ -1,0 +1,69 @@
+.icons {
+  position: relative;
+  margin: 40px 0 74px;
+  text-align: justify;
+  font-size: 0;
+}
+
+
+.icons__plate {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 20px;
+  width: 100px;
+  color: $light-gray;
+  vertical-align: top;
+  text-align: center;
+  font-size: 12px;
+
+  .icon {
+    fill: $emerald;
+  }
+
+  .icon__cnt {
+    transition: fill 1s $button-easing;
+  }
+}
+
+
+.icons__switch {
+  position: absolute;
+  top: -110px;
+}
+
+.icons__btn {
+  display: inline-block;
+  padding: 0 20px;
+  width: 60px;
+  height: 45px;
+  border-right-width: 0;
+  border-radius: 0;
+  font-size: $small-font-size;
+  line-height: 45px;
+  transition: all 100ms $button-easing;
+
+  .hairlines & {
+    border-right-width: 0;
+  }
+
+  &:last-child {
+    border-right-width: 1px;
+    border-radius: 0 $border-radius $border-radius 0;
+    .hairlines & {
+      border-right-width: 0.5px;
+    }
+  }
+
+  &:first-child {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  &:hover + & {
+    border-left-color: lighten($emerald, 10%);
+  }
+
+  &.is-active + & {
+    border-left-color: $emerald;
+  }
+}
+

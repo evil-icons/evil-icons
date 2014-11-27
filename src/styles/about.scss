@@ -1,0 +1,36 @@
+.about {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+  & > p:first-child {
+    text-align: left;
+  }
+}
+
+
+.about__person {
+  display: inline-block;
+  font-size: $small-font-size;
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+}
+
+
+.about__sponsor {
+  display: block;
+  margin: 140px 0;
+}
+
+.about__em {
+  width: 319px;
+  height: 72px;
+  margin: 0 auto;
+  background: url("assets/images/em.png") no-repeat;
+  background-size: 100%;
+}
