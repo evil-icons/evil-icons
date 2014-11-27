@@ -1,6 +1,9 @@
+var fs = require('fs');
+var spritePath = __dirname + "/app/views/evil_icons/_icons.erb";
+
 module.exports = {
 
-  sprite: fs.readFileSync("./app/views/evil_icons/_icons.erb").toString(),
+  sprite: fs.readFileSync(spritePath).toString(),
 
   icon: function icon(name, options) {
     var options = options || {};
