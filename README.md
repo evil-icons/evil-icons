@@ -61,9 +61,9 @@ Here are some examples:
 icons.sprite;
 
 /* Icons rendering */
-icon("ei-search");
-icon("ei-arrow-right", {size: "m"});
-icon("ei-envelope", {size: "l", class: "custom-class"});
+icons.icon("ei-search");
+icons.icon("ei-arrow-right", {size: "m"});
+icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 ```
 
 ### Styling
@@ -73,13 +73,13 @@ For example, the facebook icon has the `.icon--ei-facebook` modifier.
 
 In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil icons have some predefined sizes: `s` (25x25, default), `m` (50x50), , `l` (100x100), `xl` (150x150) and `xxl` (200x200). You may want to add more sizes, we recommend to keep the sizes multiple to 50.
 ```js
-icon("ei-arrow-right", {size: "m"})
+icons.icon("ei-arrow-right", {size: "m"})
 ```
 
 Also you may want to add a custom class for an icon.
 You can do this using the `class` parameter:
 ```js
-icon("ei-envelope", {class: "custom-class"})
+icons.icon("ei-envelope", {class: "custom-class"})
 ```
 
 An icon's color can be changed in CSS:
