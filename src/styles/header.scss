@@ -1,6 +1,11 @@
 .header {
   margin: 60px 0 100px;
   text-align: center;
+
+  h1 {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .header__btn {
