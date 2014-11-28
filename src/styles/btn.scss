@@ -10,8 +10,13 @@
   text-decoration: none;
   font-size: $base-font-size;
   line-height: 60px;
-  transition: all 200ms $base-easing;
+  transition: $base-easing-time $base-easing;
+  transition-property: color, border-color;
   -webkit-transform: translateZ(0);
+
+  &.is-hovered {
+    transition-duration: $short-easing-time;
+  }
 
   &:visited {
     color: $gray;
@@ -21,6 +26,7 @@
     @include colored(color, 10%);
     @include colored(border-color, 10%);
     cursor: pointer;
+    transition-duration: $short-easing-time;
   }
 
   &:focus {

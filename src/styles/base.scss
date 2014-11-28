@@ -4,6 +4,8 @@ body {
   max-width: $max-width;
   color: $gray;
   font: #{$base-font-size}/$base-line-height $base-font;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
 
   &:before {
     display: block;
@@ -21,9 +23,9 @@ body {
 
 
 a {
-  transition: color 100ms $base-easing;
+  transition: color $short-easing-time $base-easing;
   .icon__cnt {
-    transition: fill 100ms $base-easing;
+    transition: fill $short-easing-time $base-easing;
   }
 }
 
@@ -45,7 +47,7 @@ h1, h2, h3 {
 h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
-  letter-spacing: -3px;
+  letter-spacing: -4px;
 
   sup {
     position: relative;

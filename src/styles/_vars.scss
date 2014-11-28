@@ -17,7 +17,7 @@ $black:       #111;
 $emerald:     #29bb9c;
 $blue:        #2980b9;
 $green:       #2ecc71;
-$yellow:      #f1c40f;
+$yellow:      #f39c12;
 $red:         #e74c3c;
 $purple:      #8e44ad;
 
@@ -35,4 +35,5 @@ $max-width:     1000px;
 $border-radius: 5px;
 
 $base-easing:       cubic-bezier(0.445, 0.05, 0.55, 0.95);
-$base-easing-time:  1s
+$base-easing-time:  1s;
+$short-easing-time: 200ms;

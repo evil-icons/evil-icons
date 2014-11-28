@@ -21,7 +21,7 @@
   }
 
   .icon__cnt {
-    transition: fill 1s $base-easing;
+    transition: fill $base-easing-time $base-easing;
   }
 }
 
@@ -40,7 +40,6 @@
   border-radius: 0;
   font-size: $small-font-size;
   line-height: 45px;
-  transition: all 100ms $base-easing;
 
   .hairlines & {
     border-right-width: 0;

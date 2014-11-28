@@ -4,6 +4,7 @@ html
     title Evil Icons
     link(rel="stylesheet" href="/assets/app.css")
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="ya-title=fade,ya-dock=fade")
 
     meta(name="description"         content="Evil Icons. Lightweight SVG icons for your web project")
 
@@ -63,23 +64,23 @@ html
       //- p Support us:
 
       figure.about__person
-        a.link(href="https://twitter.com/outpunk")
+        a(href="https://twitter.com/outpunk")
           img(src="/assets/images/sasha.jpg")
           figcaption Alexander Madyankin
 
       figure.about__person
-        a.link(href="https://twitter.com/romanshamin")
+        a(href="https://twitter.com/romanshamin")
           img(src="/assets/images/roma.jpg")
           figcaption Roman Shamin
 
-      a.link.about__sponsor
+      a.about__sponsor
         p Sponsored by Evil&nbsp;Martians
         .about__em
 
 
     footer.footer
       p Evil Icons licensed under MIT License
-      a.link(href="https://github.com/outpunk/evil-icons")
+      a(href="https://github.com/outpunk/evil-icons")
         | GitHub Repo
         != icons.icon("ei-external-link")
 

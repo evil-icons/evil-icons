@@ -8,6 +8,13 @@ $ ->
   color         = 1
 
 
+  # Hover transition fix
+
+  $('.btn')
+    .on 'mouseenter', -> $(@).addClass('is-hovered')
+    .on 'mouseout',   -> setTimeout (=> $(@).removeClass('is-hovered')), 250
+
+
   # Icons size switch
 
   buttons.on 'click', ->
