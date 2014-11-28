@@ -1,6 +1,8 @@
 # Evil Icons
 
-Evil Icons is a set of SVG icons designed extensively for using in modern web projects. You can use it as-is, or try a Ruby gem (for Ruby on Rails) or a npm package. See the icons [here](http://evil-icons.io).
+![](http://evil-icons.io/assets/images/social.png)
+
+Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem. Just use icon names with your templates and styles — and all the rest will be done automagically. See the icons [here](http://evil-icons.io).
 
 Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
