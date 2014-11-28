@@ -4,8 +4,8 @@ Free ‘plug and play’ set of SVG icons designed specifically for web projects
 
 Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
-[Alexander Madyankin]:  https://github.com/outpunk
-[Roman Shamin]:         https://github.com/romashamin
+[Alexander Madyankin]:  http://madyankin.name
+[Roman Shamin]:         https://twitter.com/romanshamin
 [Evil Martians]:        https://evilmartians.com
 
 
