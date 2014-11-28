@@ -14,6 +14,12 @@
     margin: 10px;
   }
 
+  @include max-width(767) {
+    & + & {
+      display: none;
+    }
+  }
+
   .btn {
     margin-bottom: 10px;
 
