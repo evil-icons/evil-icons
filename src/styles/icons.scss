@@ -2,6 +2,7 @@
   position: relative;
   margin: 40px 0 74px;
   text-align: center;
+  text-align-last: left;
   font-size: 0;
 
   @include min-width(1050) {
@@ -14,11 +15,11 @@
   position: relative;
   display: inline-block;
   margin: 0 0 20px;
-  width: 100px;
+  width: 140px;
   color: $light-gray;
   vertical-align: top;
   text-align: center;
-  font-size: 12px;
+  font-size: $small-font-size;
 
   .icon {
     @include colored(fill);
@@ -26,6 +27,22 @@
 
   .icon__cnt {
     transition: fill $base-easing-time $base-easing;
+  }
+
+  .icons--s & {
+    width: 200px;
+    text-align: left;
+    font-size: 16px;
+
+    .icon {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    figcaption {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -72,6 +89,15 @@
 
   &.is-active + & {
     @include colored(border-left-color);
+  }
+
+   @include max-width(450) {
+    &:first-child {
+      display: none;
+    }
+    &:first-child + & {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
   }
 }
 

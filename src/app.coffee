@@ -1,36 +1,40 @@
 $ ->
 
-  icons         = $('.icons .icon')
-  buttons       = $('.icons__btn')
-  colors        = 'green emerald blue purple red yellow'
-  colorsArray   = colors.split(' ')
+  icons         = $(".icons .icon")
+  iconsSection  = $(".icons")
+  buttons       = $(".icons__btn")
+  colors        = "green emerald blue purple red yellow"
+  colorsArray   = colors.split(" ")
   colorInterval = 8000
   color         = 1
 
 
   # Hover transition fix
 
-  $('.btn')
-    .on 'mouseenter', -> $(@).addClass('is-hovered')
-    .on 'mouseout',   -> setTimeout (=> $(@).removeClass('is-hovered')), 250
+  $(".btn")
+    .on "mouseenter", -> $(@).addClass("is-hovered")
+    .on "mouseout",   -> setTimeout (=> $(@).removeClass("is-hovered")), 250
 
 
   # Icons size switch
 
-  buttons.on 'click', ->
-    modifier = "icon--#{$(@).data('size')}"
+  buttons.on "click", ->
+    size = $(@).data("size")
 
-    icons.removeClass('icon--s icon--m icon--l');
-    icons.addClass(modifier);
+    icons.removeClass "icon--s icon--m icon--l"
+    icons.addClass    "icon--#{size}"
 
-    buttons.removeClass('is-active');
-    $(@).addClass('is-active');
+    iconsSection.removeClass "icons--s icons--m icons--l"
+    iconsSection.addClass    "icons--#{size}"
+
+    buttons.removeClass("is-active")
+    $(@).addClass("is-active")
 
 
   # Color change
 
   changeColor = ->
-    $('body')
+    $("body")
       .removeClass(colors)
       .addClass(colorsArray[color])
     color = 0 if ++color == colorsArray.length
@@ -42,10 +46,10 @@ $ ->
 
   if window.devicePixelRatio && devicePixelRatio >= 2
     testElem = $ "<div>",
-      id: 'testElem'
+      id: "testElem"
       css: { border: ".5px solid transparent" }
 
-    $('body').append(testElem)
+    $("body").append(testElem)
     $("html").addClass("hairlines") if testElem[0].offsetHeight == 1
     testElem.remove('#testElem')
 
