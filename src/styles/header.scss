@@ -17,7 +17,7 @@
   .btn {
     margin-bottom: 10px;
 
-    @include max-width(449) {
+    @include max-width(1023) {
       max-width: 100%;
       width: 400px;
     }
