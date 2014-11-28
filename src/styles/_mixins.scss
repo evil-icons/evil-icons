@@ -5,3 +5,16 @@
     }
   }
 }
+
+@mixin max-width($width) {
+  @media all and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+
+@mixin min-width($width) {
+  @media all and (min-width: #{$width}px) {
+    @content;
+  }
+}

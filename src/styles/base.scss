@@ -100,5 +100,9 @@ a, a:visited {
       @include colored(fill);
     }
   }
+
+  img {
+    border: none;
+  }
 }
 

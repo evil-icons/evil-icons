@@ -4,10 +4,22 @@
 }
 
 .header__btn {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 0 0 20px;
+
+  @include min-width(450) {
+    display: inline-block;
+  }
+
+  @include min-width(500) {
+    margin: 10px;
+  }
 
   .btn {
     margin-bottom: 10px;
+
+    @include max-width(449) {
+      max-width: 100%;
+      width: 400px;
+    }
   }
 }

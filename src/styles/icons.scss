@@ -27,8 +27,13 @@
 
 
 .icons__switch {
-  position: absolute;
-  top: -110px;
+  margin: 0 auto 30px;
+  text-align: center;
+
+  @include min-width(768) {
+    position: absolute;
+    top: -110px;
+  }
 }
 
 .icons__btn {

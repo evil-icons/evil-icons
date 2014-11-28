@@ -2,10 +2,6 @@
   margin: 0 auto;
   max-width: 750px;
   text-align: center;
-
-  & > p:first-child {
-    text-align: left;
-  }
 }
 
 
@@ -25,13 +21,20 @@
 
 .about__sponsor {
   display: block;
-  margin: 140px 0;
+  margin: 80px 0;
+
+  @include min-width(400) {
+    margin: 140px 0;
+  }
 }
 
 .about__em {
   margin: 0 auto;
-  width: 319px;
-  height: 72px;
-  background: url("assets/images/em.png") no-repeat;
-  background-size: 100%;
+  width: 200px;
+  height: 45px;
+
+  @include min-width(400) {
+    width: 319px;
+    height: 72px;
+  }
 }
