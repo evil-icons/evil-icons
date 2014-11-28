@@ -1,0 +1,40 @@
+.github-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+}
+
+
+.github-ribbon__inner {
+  @include colored(background-color);
+
+  position: absolute;
+  top: 42px;
+  right: -43px;
+  z-index: 9999;
+  padding: 2px 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  font: $small-font-size $base-font;
+  transition: background-color $base-easing-time $base-easing;
+  transform: rotate(45deg);
+  pointer-events: auto;
+
+  a, a:hover {
+    display: inline-block;
+    padding: 2px 0;
+    width: 200px;
+    border: dotted rgba(255, 255, 255, 0.7);
+    border-width: 1px 0;
+    color: #fff !important;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+  }
+}
+
