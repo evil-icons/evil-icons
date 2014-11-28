@@ -1,6 +1,6 @@
 .about {
-  max-width: 750px;
   margin: 0 auto;
+  max-width: 750px;
   text-align: center;
 
   & > p:first-child {
@@ -14,9 +14,10 @@
   font-size: $small-font-size;
 
   img {
+    margin-bottom: 10px;
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    border: none;
     border-radius: 50%;
   }
 }
@@ -28,9 +29,9 @@
 }
 
 .about__em {
+  margin: 0 auto;
   width: 319px;
   height: 72px;
-  margin: 0 auto;
   background: url("assets/images/em.png") no-repeat;
   background-size: 100%;
 }

@@ -38,16 +38,16 @@ h1, h2, h3 {
   font-family: $header-font;
 
   small, sup {
-    font-family: $base-font;
     letter-spacing: 0;
+    font-family: $base-font;
   }
 }
 
 
 h1 {
+  letter-spacing: -4px;
   font-size: $h1-font-size;
   line-height: $h1-line-height;
-  letter-spacing: -4px;
 
   sup {
     position: relative;
@@ -60,9 +60,9 @@ h1 {
 
 h2 {
   margin-bottom: 35px;
+  letter-spacing: -2px;
   font-size: $h2-font-size;
   line-height: $h2-line-height;
-  letter-spacing: -2px;
 
   small {
     margin-top: 10px;
@@ -83,18 +83,19 @@ small {
 
 
 a, a:visited {
-  text-decoration: none;
   color: $gray;
+  text-decoration: none;
 
   .icon {
     vertical-align: -7px;
+
     fill: $gray;
   }
 
   &:hover {
     @include colored;
-    cursor: pointer;
 
+    cursor: pointer;
     .icon {
       @include colored(fill);
     }
