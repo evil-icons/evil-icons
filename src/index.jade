@@ -34,6 +34,14 @@ html
     != icons.sprite
 
     header.header
+      .header__logo
+        svg
+          defs
+            mask#logo-mask
+              rect(width="100%" height="100%" fill="white")
+              image(xlink:href="/assets/images/logo.svg" fill="#000" height="100%" width="100%")
+          rect(width="100%" height="100%" mask="url(#logo-mask)" fill="white")
+
       h1
         | Evil Icons
         sup v.1.0.1

@@ -29,3 +29,17 @@
     }
   }
 }
+
+
+.header__logo {
+  @include colored(background);
+  width: 200px;
+  height: 200px;
+  margin: 0 auto -10px;
+  transition: background $base-easing-time $base-easing;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
