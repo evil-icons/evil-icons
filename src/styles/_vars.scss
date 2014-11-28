@@ -7,16 +7,32 @@ $h1-font-size:      62px;
 $h1-line-height:    1;
 $h2-font-size:      45px;
 $h2-line-height:    1;
-
 $small-font-size:   14px;
 
-$emerald:     #29bb9c;
 $gray:        #959595;
 $light-gray:  #acacac;
 $pale-gray:   #e1e1e1;
 $black:       #111;
 
-$max-width: 1000px;
+$emerald:     #29bb9c;
+$blue:        #2980b9;
+$green:       #2ecc71;
+$yellow:      #f1c40f;
+$red:         #e74c3c;
+$purple:      #8e44ad;
+
+$colors: (
+  emerald:     $emerald,
+  blue:        $blue,
+  green:       $green,
+  yellow:      $yellow,
+  red:         $red,
+  purple:      $purple
+);
+
+
+$max-width:     1000px;
 $border-radius: 5px;
 
-$button-easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$base-easing:       cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$base-easing-time:  1s

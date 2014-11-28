@@ -14,14 +14,15 @@
     "gulp-connect": "^2.2.0",
     "gulp-cssmin": "^0.1.6",
     "gulp-imagemin": "^1.2.1",
+    "gulp-inline-base64": "^0.1.4",
     "gulp-jade": "^0.9.0",
     "gulp-livereload": "^2.1.1",
     "gulp-minify-html": "^0.1.6",
+    "gulp-ruby-sass": "^0.7.1",
     "gulp-sass": "^1.1.0",
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
     "gulp-watch": "^1.1.0",
-    "imagemin-pngquant": "^4.0.0",
-    "gulp-inline-base64": "^0.1.4"
+    "imagemin-pngquant": "^4.0.0"
   }
 }

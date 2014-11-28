@@ -1,0 +1,7 @@
+@mixin colored($property: color, $lighten: 0%) {
+  @each $name, $color in $colors {
+    .#{$name} & {
+      #{$property}: lighten($color, $lighten);
+    }
+  }
+}

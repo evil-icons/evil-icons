@@ -1,5 +1,5 @@
 gulp         = require 'gulp'
-sass         = require 'gulp-sass'
+sass         = require 'gulp-ruby-sass'
 autoprefixer = require 'gulp-autoprefixer'
 cssmin       = require 'gulp-cssmin'
 jade         = require 'gulp-jade'
@@ -23,7 +23,7 @@ jadeVars  = {iconNames: iconNames, icons: icons}
 
 gulp.task 'css', ->
   gulp.src 'src/app.scss'
-    .pipe sass().on('error', gutil.log)
+    .pipe sass(quiet: true).on('error', gutil.log)
     .pipe inline(baseDir: './', debug: true)
     .pipe autoprefixer()
     .pipe cssmin(keepSpecialComments: 0)

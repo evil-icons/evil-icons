@@ -8,23 +8,23 @@ body {
   &:before {
     display: block;
     height: 4px;
-    background: $emerald;
     content: "";
+    transition: background $base-easing-time $base-easing;
+  }
+}
+
+@each $name, $color in $colors {
+  .#{$name}:before {
+    background: $color;
   }
 }
 
 
-a, a:visited {
-  color: $emerald;
-  transition: color 100ms $button-easing;
+a {
+  transition: color 100ms $base-easing;
   .icon__cnt {
-    transition: fill 100ms $button-easing;
+    transition: fill 100ms $base-easing;
   }
-}
-
-
-a:hover {
-  color: lighten($emerald, 10%);
 }
 
 
@@ -80,7 +80,7 @@ small {
 }
 
 
-a.link {
+a, a:visited {
   text-decoration: none;
   color: $gray;
 
@@ -90,11 +90,12 @@ a.link {
   }
 
   &:hover {
-    color: $emerald;
+    @include colored;
     cursor: pointer;
 
     .icon {
-      fill: $emerald;
+      @include colored(fill);
     }
   }
 }
+

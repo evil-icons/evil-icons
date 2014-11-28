@@ -17,11 +17,11 @@
   font-size: 12px;
 
   .icon {
-    fill: $emerald;
+    @include colored(fill);
   }
 
   .icon__cnt {
-    transition: fill 1s $button-easing;
+    transition: fill 1s $base-easing;
   }
 }
 
@@ -40,7 +40,7 @@
   border-radius: 0;
   font-size: $small-font-size;
   line-height: 45px;
-  transition: all 100ms $button-easing;
+  transition: all 100ms $base-easing;
 
   .hairlines & {
     border-right-width: 0;
@@ -59,11 +59,11 @@
   }
 
   &:hover + & {
-    border-left-color: lighten($emerald, 10%);
+    @include colored(border-left-color, 10%);
   }
 
   &.is-active + & {
-    border-left-color: $emerald;
+    @include colored(border-left-color);
   }
 }
 
