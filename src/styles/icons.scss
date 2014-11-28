@@ -1,8 +1,12 @@
 .icons {
   position: relative;
   margin: 40px 0 74px;
-  text-align: justify;
+  text-align: center;
   font-size: 0;
+
+  @include min-width(1050) {
+    text-align: justify;
+  }
 }
 
 
@@ -30,7 +34,7 @@
   margin: 0 auto 30px;
   text-align: center;
 
-  @include min-width(768) {
+  @include min-width(1050) {
     position: absolute;
     top: -110px;
   }
