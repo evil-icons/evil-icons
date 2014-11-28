@@ -1,0 +1,5 @@
+{
+  "title": "Evil Icons",
+  "shortDescription": "Lightweight SVG icons for your web project",
+  "longDescription": "Free ‘plug and play’ set of SVG icons designed for web projects. Install it as a Node.js package or a Ruby gem and use only icon names in your templates and styles. All the rest will be done automagically."
+}

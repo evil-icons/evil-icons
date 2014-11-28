@@ -1,20 +1,20 @@
 doctype html
 html
   head
-    title Evil Icons
+    title= data.title
     link(rel="stylesheet" href="/assets/app.css")
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     meta(name="viewport" content="ya-title=fade,ya-dock=fade")
 
-    meta(name="description"         content="Evil Icons. Lightweight SVG icons for your web project")
+    meta(name="description"         content=data.longDescription)
 
-    meta(property="og:title"        content="Evil Icons")
-    meta(property="og:description"  content="Evil Icons. Lightweight SVG icons for your web project")
+    meta(property="og:title"        content=data.title)
+    meta(property="og:description"  content=data.longDescription)
     meta(property="og:url"          content="http://evil-icons.io")
     meta(property="og:type"         content="website")
 
-    meta(name="twitter:title"       content="Evil Icons")
-    meta(name="twitter:description" content="Evil Icons. Lightweight SVG icons for your web project")
+    meta(name="twitter:title"       content=data.title)
+    meta(name="twitter:description" content=data.shortDescription)
     meta(name="twitter:domain"      content="evil-icons.io")
 
 
