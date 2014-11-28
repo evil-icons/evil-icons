@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "api_version": 1,
+  "layout": {
+    "logo": "http://evil-icons.io/assets/images/yandex-widget.png",
+    "color": "#ff6666"
+  }
+}
