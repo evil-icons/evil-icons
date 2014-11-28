@@ -3,7 +3,7 @@ $ ->
   icons         = $(".icons .icon")
   iconsSection  = $(".icons")
   buttons       = $(".icons__btn")
-  colors        = "green emerald blue purple red yellow"
+  colors        = "red yellow green emerald blue purple"
   colorsArray   = colors.split(" ")
   colorInterval = 8000
   color         = 1
