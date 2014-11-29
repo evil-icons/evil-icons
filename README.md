@@ -1,5 +1,3 @@
-# Evil Icons
-
 ![](http://evil-icons.io/assets/images/social.png)
 
 Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem (for Rails). Just use icon names with your templates and styles — and all the rest will be done automagically. See the icons [here](http://evil-icons.io).
