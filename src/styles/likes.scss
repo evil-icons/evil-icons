@@ -1,0 +1,22 @@
+.likes {
+  height: 30px;
+  margin-bottom: 40px;
+}
+
+.likes__fb, .likes__tw, .likes__gh {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.likes__fb .fb_iframe_widget {
+  top: -10px;
+}
+
+.likes__tw {
+  width: 80px;
+}
+
+.likes__fb {
+  margin-right: 20px;
+}

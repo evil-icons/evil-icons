@@ -52,6 +52,13 @@ html
         | Evil Icons
         sup v.1.0.1
       p Lightweight SVG icons for your web project
+      .likes
+        .likes__gh
+          iframe(src="http://ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="90" frameborder="0" scrolling="0" allowTransparency="true")
+        .likes__fb
+          div(class="fb-like" data-href="http://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
+        .likes__tw
+          a(href="https://twitter.com/share" class="twitter-share-button" data-url="http://evil-icons.io" data-hashtags="evil-icons" data-text=data.shortDescription)
 
       .header__btn
         a.btn.btn--accent(href="https://github.com/outpunk/evil-icons#readme") Getting Started
@@ -88,7 +95,16 @@ html
         | sites&nbsp;&mdash; and we&nbsp;would love you to&nbsp;do&nbsp;that as&nbsp;well.
         | Contributions are welcome!
 
-      //- p Support us:
+      p Support us:
+      .likes
+        .likes__gh
+          iframe(src="http://ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="90" frameborder="0" scrolling="0" allowTransparency="true")
+        .likes__fb
+          div(class="fb-like" data-href="http://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
+        .likes__tw
+          a(href="https://twitter.com/share" class="twitter-share-button" data-url="http://evil-icons.io" data-hashtags="evil-icons" data-text=data.shortDescription)
+
+
 
       figure.about__person
         a(href="https://twitter.com/outpunk")
@@ -111,15 +127,16 @@ html
         | GitHub Repo
         != icons.icon("ei-external-link")
 
+    #fb-root
 
-  script.
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  //- script.
+  //-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //-   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //-   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //-   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-57143070-1', 'auto');
-    ga('send', 'pageview');
+  //-   ga('create', 'UA-57143070-1', 'auto');
+  //-   ga('send', 'pageview');
 
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
   script(src="/assets/app.js" defer)
