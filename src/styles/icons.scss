@@ -60,12 +60,23 @@
       margin-top: -4px;
       margin-right: 5px;
       vertical-align: middle;
+
+      .ie & {
+        margin-top: 0
+      }
     }
 
     figcaption {
       display: inline-block;
       vertical-align: middle;
     }
+  }
+}
+
+.ie {
+  .icon--m, .icon--l {
+    display: block;
+    margin: 0 auto;
   }
 }
 

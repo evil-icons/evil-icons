@@ -11,6 +11,10 @@
 
 .likes__fb .fb_iframe_widget {
   top: -10px;
+
+  .ie & {
+    top: -8px;
+  }
 }
 
 .likes__tw {
