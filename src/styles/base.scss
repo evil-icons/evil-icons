@@ -50,8 +50,8 @@ h1 {
   line-height: $h1-line-height;
 
   sup {
-    position: relative;
-    top: -($small-font-size - 1);
+    position: absolute;
+    top: 0;
     color: $light-gray;
     font-size: $small-font-size;
   }
