@@ -10,6 +10,7 @@ Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
 
 ## Usage
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/outpunk/evil-icons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ### Rails
 
