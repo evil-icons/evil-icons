@@ -84,7 +84,9 @@ html
       each icon in iconNames
         figure.icons__plate
           != icons.icon(icon, {size: "m"})
-          figcaption= icon
+          figcaption
+            span.capitalized= helpers.capitalize(icon)
+            span.normal= icon
 
 
     h2 Free & Open

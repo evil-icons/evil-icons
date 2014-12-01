@@ -17,9 +17,19 @@ fs           = require 'fs'
 inline       = require('gulp-inline-base64')
 data         = require('./data.json')
 
+
+helpers =
+  capitalize: (str) ->
+    str
+      .replace('ei-', '')
+      .replace('sc-', '')
+      .replace('-', ' ')
+      .replace /(?:^|\s)\S/g, (s) -> s.toUpperCase()
+
+
 iconsPath = './node_modules/evil-icons/app/assets/images/evil-icons'
 iconNames = (icon.replace('.svg', '') for icon in fs.readdirSync iconsPath)
-jadeVars  = {iconNames: iconNames, icons: icons, data: data}
+jadeVars  = {iconNames: iconNames, icons: icons, data: data, helpers: helpers}
 
 
 gulp.task 'css', ->
