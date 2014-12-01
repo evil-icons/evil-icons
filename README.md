@@ -4,6 +4,8 @@ Free ‘plug and play’ set of SVG icons designed specifically for web projects
 
 Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/outpunk/evil-icons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Alexander Madyankin]:  http://madyankin.name
 [Roman Shamin]:         https://twitter.com/romanshamin
 [Evil Martians]:        https://evilmartians.com
