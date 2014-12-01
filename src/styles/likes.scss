@@ -24,3 +24,19 @@
 .likes__fb {
   margin-right: 20px;
 }
+
+
+@include max-width(400) {
+  .likes {
+    height: 100px;
+    text-align: center;
+  }
+
+  .likes__fb, .likes__tw, .likes__gh {
+    display: block;
+  }
+
+  .likes__tw {
+    display: inline-block !important;
+  }
+}
