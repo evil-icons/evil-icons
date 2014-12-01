@@ -85,7 +85,8 @@ html
         figure.icons__plate
           != icons.icon(icon, {size: "m"})
           figcaption
-            span.capitalized= helpers.capitalize(icon)
+            span.capitalized
+              != helpers.capitalize(icon)
             span.normal= icon
 
 

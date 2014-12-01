@@ -23,7 +23,7 @@ helpers =
     str
       .replace('ei-', '')
       .replace('sc-', '')
-      .replace('-', ' ')
+      .replace('-', '&nbsp;')
       .replace /(?:^|\s)\S/g, (s) -> s.toUpperCase()
 
 
