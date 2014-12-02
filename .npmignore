@@ -3,6 +3,8 @@ CNAME
 .DS_Store
 npm-debug.log
 *.gem
+*.sublime-project
+*.sublime-workspace
 
 Gemfile
 Gemfile.lock
