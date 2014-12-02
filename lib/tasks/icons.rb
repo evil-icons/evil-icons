@@ -7,7 +7,7 @@ res_path  = File.join(root, 'app', 'views',  'evil_icons', '_icons.erb')
 namespace :evil_icons do
 
   desc "Generate SVG icons sprite"
-  task :process => :normalize_filenames do
+  task :process => [:normalize_filenames, :optimize] do
     generator = EvilIcons::Generator.new(svg_path)
     generator.write(res_path, 'icons')
   end
@@ -26,6 +26,11 @@ namespace :evil_icons do
       File.delete(new_name) if File.exists?(new_name)
       File.rename(old_name, new_name)
     end
+  end
+
+  desc "Optimize SVG"
+  task :optimize do
+    system "svgo -f #{svg_path} --disable=mergePaths"
   end
 
 end

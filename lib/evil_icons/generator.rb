@@ -1,5 +1,4 @@
 require "nokogiri"
-require "svg_optimizer"
 require "erb"
 
 module EvilIcons
@@ -24,8 +23,9 @@ module EvilIcons
     def icons
       files.map do |name|
         file        = read_svg(name)
-        optimized   = SvgOptimizer.optimize(file)
-        doc         = Nokogiri::HTML::DocumentFragment.parse(optimized)
+        doc         = Nokogiri::HTML::DocumentFragment.parse(file)
+
+        doc.css('*').remove_attr('fill')
 
         svg         = doc.at_css('svg')
         viewbox     = svg['viewbox']
