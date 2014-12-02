@@ -96,8 +96,8 @@
 </g>
 <g id="Icons">
 	<g>
-		<rect x="24.1" y="6.6" transform="matrix(0.7068 0.7074 -0.7074 0.7068 25.0131 -10.3553)" width="1.9" height="36.8"/>
-		<rect x="6.6" y="24.1" transform="matrix(0.7071 0.7071 -0.7071 0.7071 25 -10.3553)" width="36.8" height="1.9"/>
+		<rect x="24" y="6.6" transform="matrix(0.7071 0.7071 -0.7071 0.7071 25 -10.3553)" width="2" height="36.8"/>
+		<rect x="6.6" y="24" transform="matrix(0.7071 0.7071 -0.7071 0.7071 25 -10.3553)" width="36.8" height="2"/>
 	</g>
 </g>
 <g id="Guides">
