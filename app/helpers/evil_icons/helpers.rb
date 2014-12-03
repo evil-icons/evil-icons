@@ -20,8 +20,7 @@ module EvilIcons
     private
 
     def html_safe(html)
-      return html.html_safe if html.respond_to?(:html_safe)
-      html
+      html.respond_to?(:html_safe) ? html.html_safe : html
     end
 
   end
