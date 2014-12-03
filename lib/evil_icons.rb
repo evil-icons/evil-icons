@@ -38,7 +38,7 @@ module EvilIcons
       File.join(root_dir, 'app', 'assets', 'images')
     end
 
-    def stylesheets_file
+    def stylesheets_dir
       File.join(root_dir, 'app', 'assets', 'stylesheets')
     end
 
@@ -50,8 +50,8 @@ module EvilIcons
     end
 
     def register_sprockets
-      Sprockets.append_path(self.images_dir)
-      Sprockets.append_path(self.stylesheets_dir)
+      Sprockets.append_path(images_dir)
+      Sprockets.append_path(stylesheets_dir)
     end
 
     def register_sinatra
