@@ -2,26 +2,27 @@ module EvilIcons
   module Helpers
 
     def evil_icons_sprite
-      template = ERB.new File.new(File.join(File.dirname(File.dirname(File.dirname(__FILE__))), "views", "evil_icons", "_icons.erb")).read
-      rails_condition template.result
+      html_safe File.new(EvilIcons.sprite_file).read
     end
 
     def evil_icon(name, options = {})
       size  = options[:size] ? "icon--#{options[:size]}" : ''
       options[:class] = "icon icon--#{name} #{size} #{options[:class]}"
 
-      rails_condition "<div class='#{options[:class]}'><svg class='icon__cnt'><use xlink:href='##{name}-icon'/></svg></div>"
-
+      html_safe "
+        <div class='#{options[:class]}'>
+          <svg class='icon__cnt'><use xlink:href='##{name}-icon'/></svg>
+        </div>
+      "
     end
+
 
     private
 
-    def rails_condition(html)
-      if defined? Rails
-        html.html_safe
-      else
-        html
-      end
+    def html_safe(html)
+      return html.html_safe if html.respond_to?(:html_safe)
+      html
     end
+
   end
 end

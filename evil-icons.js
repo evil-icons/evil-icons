@@ -1,5 +1,5 @@
 var fs = require('fs');
-var spritePath = __dirname + "/app/views/evil_icons/_icons.erb";
+var spritePath = __dirname + "/app/views/evil_icons/_icons.html";
 
 module.exports = {
 

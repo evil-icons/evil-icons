@@ -2,7 +2,7 @@ require "evil_icons/generator"
 
 root      = File.expand_path('../../../', __FILE__)
 svg_path  = File.join(root, 'app', 'assets', 'images',     'evil-icons')
-res_path  = File.join(root, 'app', 'views',  'evil_icons', '_icons.erb')
+res_path  = File.join(root, 'app', 'views',  'evil_icons', '_icons.html')
 
 namespace :evil_icons do
 
@@ -11,7 +11,6 @@ namespace :evil_icons do
     generator = EvilIcons::Generator.new(svg_path)
     generator.write(res_path, 'icons')
   end
-
 
   desc "Normalize filenames"
   task :normalize_filenames do
