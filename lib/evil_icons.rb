@@ -50,8 +50,8 @@ module EvilIcons
     end
 
     def register_sprockets
-      Sprockets.append_path(images_dir)
-      Sprockets.append_path(stylesheets_dir)
+      Sprockets.append_path(self.images_dir)
+      Sprockets.append_path(self.stylesheets_dir)
     end
 
     def register_sinatra
