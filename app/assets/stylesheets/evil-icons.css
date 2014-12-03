@@ -48,7 +48,11 @@
 }
 
 .icon--ei-spinner .icon__cnt,
-.icon--ei-spinner-2 .icon__cnt,
+.icon--ei-spinner-2 .icon__cnt {
+  -webkit-animation: spin 1s steps(12) infinite;
+          animation: spin 1s steps(12) infinite;
+}
+
 .icon--ei-spinner-3 .icon__cnt {
   -webkit-animation: spin 1.5s linear infinite;
           animation: spin 1.5s linear infinite;
