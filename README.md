@@ -86,8 +86,9 @@ Finally, add the evil icons require to your `application.css`:
 //= require evil-icons
 ```
 
-Also, you can take a look at example app by @aderyabin
+Also, you can take a look at [example app] by [@aderyabin].
 [example app]: https://github.com/aderyabin/evil_icons_sinatra_example/
+[@aderyabin]: https://github.com/aderyabin
 
 
 ## npm
