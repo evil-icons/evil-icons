@@ -1,6 +1,6 @@
 ![](http://evil-icons.io/assets/images/social.png)
 
-Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem (for Rails). Just use icon names with your templates and styles — and all the rest will be done automagically. See the icons [here](http://evil-icons.io).
+Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem. Just use icon names with your templates and styles — and all the rest will be done automagically. See the icons [here](http://evil-icons.io).
 
 Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
@@ -9,6 +9,7 @@ Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 [Alexander Madyankin]:  http://madyankin.name
 [Roman Shamin]:         https://twitter.com/romanshamin
 [Evil Martians]:        https://evilmartians.com
+
 
 
 ## Usage
@@ -22,7 +23,7 @@ gem 'evil_icons'
 
 Add the evil icons require to your `application.css`:
 ```css
-/*= require evil-icons */
+//= require evil-icons
 ```
 
 Next, you have to render the evil-icons sprite in your template (or, in your layout):
@@ -37,6 +38,56 @@ Here are some examples:
 <%= evil_icon 'ei-arrow-right', size: :m %>
 <%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
 ```
+
+
+### Sinatra
+
+Add the `'evil_icons'` gem to your Gemfile:
+```ruby
+gem 'evil_icons'
+```
+And require it:
+```
+require 'evil_icons'
+```
+
+Add the helpers to your application:
+```ruby
+helpers EvilIcons::Helpers
+```
+
+Next, you have to render the evil-icons sprite in your template (or, in your layout):
+```erb
+<%= evil_icons_sprite %>
+```
+
+Finally, you can render the icon using the `icon` helper.
+Here are some examples:
+```erb
+<%= evil_icon 'ei-search' %>
+<%= evil_icon 'ei-arrow-right', size: :m %>
+<%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
+```
+
+In order to use the stylesheets, you have to add Sprockets to your application.
+Add `sinatra-asset-pipeline` to your Gemfile:
+```ruby
+gem 'sinatra-asset-pipeline'
+```
+
+And register it:
+```ruby
+require 'sinatra/asset_pipeline'
+register Sinatra::AssetPipeline
+```
+
+Finally, add the evil icons require to your `application.css`:
+```css
+//= require evil-icons
+```
+
+Also, you can take a look at example app by @aderyabin
+[example app]: https://github.com/aderyabin/evil_icons_sinatra_example/
 
 
 ## npm
@@ -68,6 +119,7 @@ icons.icon("ei-arrow-right", {size: "m"});
 icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 ```
 
+
 ### Styling
 
 Every icon has the `.icon` class and its modifier including the icon name.
@@ -93,6 +145,7 @@ An icon's color can be changed in CSS:
   fill: blue;
 }
 ```
+
 
 ## Roadmap
 * Custom icons
