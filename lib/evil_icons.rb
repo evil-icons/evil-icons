@@ -7,7 +7,7 @@ module EvilIcons
     def register!
       if rails?
         register_engine
-      elsif sprockets
+      elsif sprockets?
         register_sprockets
       end
 
