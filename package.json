@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/outpunk/evil-icons/issues"
   },
-  "homepage": "https://github.com/outpunk/evil-icons",
+  "homepage": "http://evil-icons.io",
   "devDependencies": {
     "svgo": "^0.5.0"
   }
