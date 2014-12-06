@@ -5,6 +5,7 @@ npm-debug.log
 *.gem
 *.sublime-project
 *.sublime-workspace
+*.todo
 
 Gemfile
 Gemfile.lock
