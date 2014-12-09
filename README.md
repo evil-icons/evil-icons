@@ -127,7 +127,7 @@ icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 
 Every icon has the `.icon` class and its modifier including the icon name. For example, the facebook icon has the `.icon--ei-facebook` modifier.
 
-In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil Icons have some predefined sizes: `s` (25x25, default), `m` (50×50), `l` (100×100), `xl` (150×150) and `xxl` (200×200). You may want to add more sizes, we recommend to keep the sizes multiple to 50.
+In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil Icons have some predefined sizes: `s` (25x25, default), `m` (50×50), `l` (100×100), `xl` (150×150) and `xxl` (200×200). You may want to add more sizes, we recommend to keep the sizes multiple to 25.
 ```js
 icons.icon("ei-arrow-right", {size: "m"})
 ```
