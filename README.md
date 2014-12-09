@@ -1,6 +1,8 @@
 ![](http://evil-icons.io/assets/images/social.png)
 
-Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem. Just use icon names with your templates and styles — and all the rest will be done automagically. See the icons [here](http://evil-icons.io).
+Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem (for Rails). Just use icon names with your templates and styles — and all the rest will be done automagically.
+
+[evil-icons.io](http://evil-icons.io)
 
 Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
 
@@ -21,7 +23,7 @@ Add the `'evil_icons'` gem to your Gemfile:
 gem 'evil_icons'
 ```
 
-Add the evil icons require to your `application.css`:
+Add the Evil Icons require to your `application.css`:
 ```css
 //= require evil-icons
 ```
@@ -98,7 +100,7 @@ Add the `'evil-icons'` package to your project:
 npm install evil-icons
 ```
 
-Add the evil icons styles to your pages:
+Add the Evil Icons styles to your pages:
 ```html
 <link rel="stylesheet" type="text/css" href="./node_modules/evil-icons/app/assets/stylesheets/evil-icons.css">
 ```
@@ -123,10 +125,9 @@ icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 
 ### Styling
 
-Every icon has the `.icon` class and its modifier including the icon name.
-For example, the facebook icon has the `.icon--ei-facebook` modifier.
+Every icon has the `.icon` class and its modifier including the icon name. For example, the facebook icon has the `.icon--ei-facebook` modifier.
 
-In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil icons have some predefined sizes: `s` (25x25, default), `m` (50x50), , `l` (100x100), `xl` (150x150) and `xxl` (200x200). You may want to add more sizes, we recommend to keep the sizes multiple to 50.
+In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil Icons have some predefined sizes: `s` (25x25, default), `m` (50×50), `l` (100×100), `xl` (150×150) and `xxl` (200×200). You may want to add more sizes, we recommend to keep the sizes multiple to 50.
 ```js
 icons.icon("ei-arrow-right", {size: "m"})
 ```
@@ -150,7 +151,7 @@ An icon's color can be changed in CSS:
 
 ## Roadmap
 * Custom icons
-* PSD/AI/Sketch for designers
+* Sketch-file for designers
 * Grunt plugin
 * Gulp plugin
 * CDN version
