@@ -68,9 +68,3 @@ $(window).load ->
 
   $('<script>', src: like).appendTo('body') for like in [fb, tw]
 
-
-
-
-
-
-
