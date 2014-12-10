@@ -36,9 +36,15 @@
   margin: 0 auto;
   width: 200px;
   height: 45px;
+  opacity: 1;
+  transition: opacity $short-easing-time $base-easing;
 
   @include min-width(400) {
     width: 319px;
     height: 72px;
+  }
+
+  &:hover {
+    opacity: 0.9;
   }
 }
