@@ -4,14 +4,14 @@ Free ‘plug and play’ set of SVG icons designed specifically for web projects
 
 [evil-icons.io](http://evil-icons.io)
 
-Made by [Alexander Madyankin] and [Roman Shamin]. Sponsored by [Evil Martians].
+Made by [Alexander Madyankin] and [Roman Shamin]
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/outpunk/evil-icons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<a href="https://evilmartians.com/?utm_source=evil-icons">
+<img src="http://evil-icons.io/assets/images/em.svg" alt="Sponsored by Evil Martians" width="319" height="72">
+</a>
 
 [Alexander Madyankin]:  http://madyankin.name
 [Roman Shamin]:         https://twitter.com/romanshamin
-[Evil Martians]:        https://evilmartians.com
-
 
 
 ## Usage
