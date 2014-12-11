@@ -7,7 +7,7 @@ Free ‘plug and play’ set of SVG icons designed specifically for web projects
 Made by [Alexander Madyankin] and [Roman Shamin]
 
 <a href="https://evilmartians.com/?utm_source=evil-icons">
-<img src="http://evil-icons.io/assets/images/em.svg" alt="Sponsored by Evil Martians" width="319" height="72">
+<img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="319" height="72">
 </a>
 
 [Alexander Madyankin]:  http://madyankin.name
