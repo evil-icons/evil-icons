@@ -1,7 +1,13 @@
 var fs = require('fs');
 var spritePath = __dirname + "/app/views/evil_icons/_icons.html";
 
+var includePaths = function () {
+  return [ __dirname + '/app/assets/stylesheets' ];
+};
+
 module.exports = {
+
+  includePaths: includePaths(),
 
   sprite: fs.readFileSync(spritePath).toString(),
 
