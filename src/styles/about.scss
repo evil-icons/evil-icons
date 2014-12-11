@@ -34,14 +34,14 @@
 
 .about__em {
   margin: 0 auto;
-  width: 200px;
-  height: 45px;
+  width: 236px;
+  height: 54px;
   opacity: 1;
   transition: opacity $short-easing-time $base-easing;
 
   @include min-width(400) {
-    width: 319px;
-    height: 72px;
+    width: 472px;
+    height: 108px;
   }
 
   &:hover {
