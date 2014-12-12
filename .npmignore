@@ -10,12 +10,9 @@ npm-debug.log
 Gemfile
 Gemfile.lock
 evil_icons.gemspec
-index.html
 Rakefile
 
-app/helpers
-doc
-icons-sources
+assets/ei.ai
+download
 lib
 node_modules
-
