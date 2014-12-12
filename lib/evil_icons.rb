@@ -5,13 +5,9 @@ module EvilIcons
   class << self
 
     def register!
-      if rails?
-        register_engine
-      elsif sprockets?
-        register_sprockets
-      end
-
-      register_sinatra if sinatra?
+      register_helpers
+      register_engine     if rails?
+      register_sprockets  if sprockets?
     end
 
     def rails?
@@ -20,10 +16,6 @@ module EvilIcons
 
     def sprockets?
       defined?(::Sprockets)
-    end
-
-    def sinatra?
-      defined?(Sinatra)
     end
 
     def root_dir
@@ -53,8 +45,8 @@ module EvilIcons
       Sprockets.append_path(stylesheets_dir)
     end
 
-    def register_sinatra
-       require_relative '../app/helpers/evil_icons/helpers'
+    def register_helpers
+      require_relative 'evil_icons/helpers'
     end
 
   end
