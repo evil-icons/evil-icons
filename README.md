@@ -10,7 +10,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-[Alexander Madyankin]:  http://madyankin.name
+[Alexander Madyankin]:  https://twitter.com/outpunk
 [Roman Shamin]:         https://twitter.com/romanshamin
 
 
