@@ -1,3 +1,7 @@
+## v1.2.0
+* Fixed cart icon
+* Styles moved to assets/css.
+
 ## v1.1.0
 * Sinatra support (Thanks to [@aderyabin])
 * Spinners' animation improvement (Thanks to [@fliptheweb])
