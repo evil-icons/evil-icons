@@ -1,16 +1,15 @@
+require "evil_icons"
 require "evil_icons/generator"
-require "evil_icons/version"
 
-root      = File.expand_path('../../../', __FILE__)
-svg_path  = File.join(root, 'assets', 'icons')
-res_path  = File.join(root, 'assets', 'sprite.svg')
+svg_path    = EvilIcons.images_dir
+sprite_path = EvilIcons.sprite_file
 
 namespace :evil_icons do
 
   desc "Generate SVG icons sprite"
   task :process => [:normalize_filenames, :optimize] do
     generator = EvilIcons::Generator.new(svg_path)
-    generator.write(res_path, 'icons')
+    generator.write(sprite_path, 'icons')
   end
 
   desc "Normalize filenames"
