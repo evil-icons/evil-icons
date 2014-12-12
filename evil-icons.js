@@ -1,5 +1,5 @@
 var fs = require('fs');
-var spritePath = __dirname + "/app/views/evil_icons/_icons.html";
+var spritePath = __dirname + "/assets/sprite.svg";
 
 module.exports = {
 

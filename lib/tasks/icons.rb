@@ -1,8 +1,8 @@
 require "evil_icons/generator"
 
 root      = File.expand_path('../../../', __FILE__)
-svg_path  = File.join(root, 'app', 'assets', 'images',     'evil-icons')
-res_path  = File.join(root, 'app', 'views',  'evil_icons', '_icons.html')
+svg_path  = File.join(root, 'assets', 'icons')
+res_path  = File.join(root, 'assets', 'sprite.svg')
 
 namespace :evil_icons do
 

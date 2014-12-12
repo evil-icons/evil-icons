@@ -31,17 +31,16 @@ module EvilIcons
     end
 
     def sprite_file
-      File.join(root_dir, 'app', 'views', 'evil_icons', '_icons.html')
+      File.join(root_dir, 'assets', 'sprite.svg')
     end
 
     def images_dir
-      File.join(root_dir, 'app', 'assets', 'images')
+      File.join(root_dir, 'assets', 'icons')
     end
 
     def stylesheets_dir
-      File.join(root_dir, 'app', 'assets', 'stylesheets')
+      File.join(root_dir, 'assets', 'css')
     end
-
 
     private
 
