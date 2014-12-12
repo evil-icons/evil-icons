@@ -102,7 +102,7 @@ npm install evil-icons
 
 Add the Evil Icons styles to your pages:
 ```html
-<link rel="stylesheet" type="text/css" href="./node_modules/evil-icons/app/assets/stylesheets/evil-icons.css">
+<link rel="stylesheet" type="text/css" href="./node_modules/evil-icons/assets/css/evil-icons.css">
 ```
 
 Require `evil-icons` in your JavaScript code:
