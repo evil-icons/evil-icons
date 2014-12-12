@@ -1,4 +1,5 @@
 require "evil_icons/generator"
+require "evil_icons/version"
 
 root      = File.expand_path('../../../', __FILE__)
 svg_path  = File.join(root, 'assets', 'icons')
@@ -30,6 +31,18 @@ namespace :evil_icons do
   desc "Optimize SVG"
   task :optimize do
     system "svgo -f #{svg_path} --disable=mergePaths"
+  end
+
+  desc "Publish packages"
+  task :publish do
+    # gem
+    gem_file = "evil_icons-#{ EvilIcons::VERSION }.gem"
+    system "gem build evil_icons.gemspec"
+    system "gem push #{ gem_file }"
+    system "rm #{ gem_file }"
+
+    # npm
+    system "npm publish ./"
   end
 
 end
