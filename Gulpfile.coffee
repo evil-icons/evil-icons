@@ -27,7 +27,7 @@ helpers =
       .replace /(?:^|\s)\S/g, (s) -> s.toUpperCase()
 
 
-iconsPath = './node_modules/evil-icons/app/assets/images/evil-icons'
+iconsPath = './node_modules/evil-icons/assets/icons'
 iconNames = (icon.replace('.svg', '') for icon in fs.readdirSync iconsPath)
 jadeVars  = {iconNames: iconNames, icons: icons, data: data, helpers: helpers}
 
