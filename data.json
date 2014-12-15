@@ -1,7 +1,7 @@
 {
   "title": "Evil Icons",
-  "shortDescription": "Lightweight SVG icons for your web project",
-  "longDescription": "Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem. Just use icon names with your templates and styles — and all the rest will be done automagically.",
+  "shortDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
+  "longDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
   "repo": "https://github.com/outpunk/evil-icons",
   "image": "http://evil-icons.io/assets/images/social.png"
 }
