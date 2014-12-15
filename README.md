@@ -151,8 +151,8 @@ An icon's color can be changed in CSS:
 
 ## Roadmap
 * Custom icons
-* Sketch file for designers
 * Grunt plugin
 * Gulp plugin
+* Bower package
 * CDN version
 * More styles
