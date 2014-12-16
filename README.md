@@ -16,6 +16,13 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 
 ## Usage
 
+### Grunt
+Use the the [Grunt plugin].
+[Grunt plugin]: https://github.com/outpunk/grunt-evil-icons
+
+### Gulp
+Coming soon ;)
+
 ### Rails
 
 Add the `'evil_icons'` gem to your Gemfile:
