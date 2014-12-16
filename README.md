@@ -40,7 +40,7 @@ Next, you have to render the evil-icons sprite in your template (or, in your lay
 <%= evil_icons_sprite %>
 ```
 
-Finally, you can render the icon using the `icon` helper.
+Finally, you can render the icon using the `evil_icon` helper.
 Here are some examples:
 ```erb
 <%= evil_icon 'ei-search' %>
@@ -70,7 +70,7 @@ Next, you have to render the evil-icons sprite in your template (or, in your lay
 <%= evil_icons_sprite %>
 ```
 
-Finally, you can render the icon using the `icon` helper.
+Finally, you can render the icon using the `evil_icon` helper.
 Here are some examples:
 ```erb
 <%= evil_icon 'ei-search' %>
@@ -132,7 +132,7 @@ icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 
 ### Styling
 
-Every icon has the `.icon` class and its modifier including the icon name. For example, the facebook icon has the `.icon--ei-facebook` modifier.
+Every icon has the `.icon` class and its modifier including the icon name. For example, the facebook icon has the `.icon--ei-sc-facebook` modifier.
 
 In addition, an icon may have a size modifier. But we do recommend to change the size using helper's `size` parameter instead. Evil Icons have some predefined sizes: `s` (25x25, default), `m` (50×50), `l` (100×100), `xl` (150×150) and `xxl` (200×200). You may want to add more sizes, we recommend to keep the sizes multiple to 25.
 ```js
@@ -150,7 +150,7 @@ An icon's color can be changed in CSS:
 .icon {
   fill: green;
 }
-.icon--ei-facebook {
+.icon--ei-sc-facebook {
   fill: blue;
 }
 ```
