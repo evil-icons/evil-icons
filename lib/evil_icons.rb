@@ -6,8 +6,11 @@ module EvilIcons
 
     def register!
       register_helpers
-      register_engine     if rails?
-      register_sprockets  if sprockets?
+      if rails?
+        register_engine
+      elsif sprockets?
+        register_sprockets
+      end
     end
 
     def rails?
