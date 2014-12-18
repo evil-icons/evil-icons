@@ -14,8 +14,8 @@ gutil        = require 'gulp-util'
 del          = require 'del'
 icons        = require 'evil-icons'
 fs           = require 'fs'
-inline       = require('gulp-inline-base64')
-data         = require('./data.json')
+inline       = require 'gulp-inline-base64'
+data         = require './data.json'
 
 
 helpers =
