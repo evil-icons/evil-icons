@@ -14,6 +14,7 @@
 
 
 .icon {
+  position: relative;
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -47,13 +48,21 @@
   height: 200px;
 }
 
-.icon--ei-spinner .icon__cnt,
-.icon--ei-spinner-2 .icon__cnt {
+.icon__spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon--ei-spinner .icon__spinner,
+.icon--ei-spinner-2 .icon__spinner {
   -webkit-animation: spin 1s steps(12) infinite;
           animation: spin 1s steps(12) infinite;
 }
 
-.icon--ei-spinner-3 .icon__cnt {
+.icon--ei-spinner-3 .icon__spinner {
   -webkit-animation: spin 1.5s linear infinite;
           animation: spin 1.5s linear infinite;
 }

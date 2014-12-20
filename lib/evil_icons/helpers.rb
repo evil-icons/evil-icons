@@ -9,15 +9,25 @@ module EvilIcons
       size  = options[:size] ? "icon--#{options[:size]}" : ''
       options[:class] = "icon icon--#{name} #{size} #{options[:class]}"
 
+      icon = "<svg class='icon__cnt'><use xlink:href='##{name}-icon'/></svg>"
+
       html_safe "
         <div class='#{options[:class]}'>
-          <svg class='icon__cnt'><use xlink:href='##{name}-icon'/></svg>
+          #{wrap_spinner icon, options[:class]}
         </div>
       "
     end
 
 
     private
+
+    def wrap_spinner(html, klass)
+      if klass.include?("spinner")
+        html_safe "<div class='icon__spinner'>#{html}</div>"
+      else
+        html
+      end
+    end
 
     def html_safe(html)
       html.respond_to?(:html_safe) ? html.html_safe : html
