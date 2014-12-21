@@ -1,3 +1,7 @@
+## v1.3.0
+* Added Linkedin and Instagram icons
+* Fixed spinners animation performance
+
 ## v1.2.0
 * Fixed cart icon
 * Styles moved to assets/css.
