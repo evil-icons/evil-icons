@@ -1,6 +1,6 @@
 ## v1.3.0
 * Added Linkedin and Instagram icons
-* Fixed spinners animation performance
+* Fixed spinners animation performance (Thanks to [@legomushroom])
 
 ## v1.2.0
 * Fixed cart icon
@@ -21,5 +21,6 @@
 * First public release
 
 
-[@aderyabin]:   https://github.com/aderyabin
-[@fliptheweb]:  https://github.com/fliptheweb
+[@aderyabin]:     https://github.com/aderyabin
+[@fliptheweb]:    https://github.com/fliptheweb
+[@legomushroom]:  https://github.com/legomushroom
