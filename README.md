@@ -16,6 +16,10 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 
 ## Usage
 
+### Supported browsers
+We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4+.
+http://caniuse.com/#search=inline
+
 ### Grunt
 Use the the [Grunt plugin].
 [Grunt plugin]: https://github.com/outpunk/grunt-evil-icons
