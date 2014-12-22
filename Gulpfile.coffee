@@ -11,6 +11,7 @@ connect      = require 'gulp-connect'
 coffee       = require 'gulp-coffee'
 uglify       = require 'gulp-uglify'
 gutil        = require 'gulp-util'
+concat       = require 'gulp-concat'
 del          = require 'del'
 icons        = require 'evil-icons'
 fs           = require 'fs'
@@ -60,8 +61,9 @@ gulp.task 'images', ->
 
 
 gulp.task 'coffee', ->
-  gulp.src 'src/app.coffee'
+  gulp.src 'src/scripts/*.coffee'
     .pipe coffee({bare: true}).on('error', gutil.log)
+    .pipe concat('app.js')
     .pipe uglify()
     .pipe gulp.dest('assets')
     .pipe connect.reload()
