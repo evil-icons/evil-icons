@@ -10,9 +10,9 @@ $ ->
   $("[data-block='download']").on "change", ->
     val = $(@).val()
     $(@).prop("selectedIndex", -1)
-
-    location.href = val
     ga("send", "event", "button", "click", "download", val)
+    location.href = val
+
 
 
   $("[data-block='readme']").on "click", ->
