@@ -1,3 +1,6 @@
+## v1.4.0
+* Added credit card, like and trophy icons
+
 ## v1.3.0
 * Added Linkedin and Instagram icons
 * Fixed spinners animation performance (Thanks to [@legomushroom])
