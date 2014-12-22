@@ -27,6 +27,7 @@
 
   .btn {
     margin-bottom: 10px;
+    vertical-align: top;
 
     @include max-width(1023) {
       max-width: 100%;
@@ -34,6 +35,55 @@
     }
   }
 }
+
+.header__download {
+  .btn {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+
+    i {
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      width: 5px;
+      height: 5px;
+      border-style: solid;
+      border-width: 0 1px 1px 0;
+      vertical-align: top;
+      color: $gray;
+      transition: border-color $short-easing-time $base-easing;
+      transform: rotate(45deg);
+
+      .hairlines & {
+        border-width: 0 0.5px 0.5px 0;
+      }
+    }
+
+    &:hover i {
+      @include colored(border-color);
+    }
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 100%;
+      opacity: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      font-size: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 
 
 .header__logo {

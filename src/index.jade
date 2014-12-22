@@ -84,9 +84,18 @@ html(itemscope itemtype="http://schema.org/Code")
         a.btn.btn--accent(href="#{data.repo}#readme") Getting Started
         small Installation guide for developers
 
-      .header__btn
-        a.btn(href="#{data.repo}/raw/master/download/evil-icons.ai") Download Icons
+      .header__btn.header__download
+        span.btn
+          | Download Icons
+          i
+          select(data-block="download")
+            option(disabled) Choose format:
+            option(value="#{data.repo}/raw/master/download/evil-icons.svg") SVG
+            option(value="#{data.repo}/raw/master/download/evil-icons.ai") Illustrator
+            option(value="#{data.repo}/raw/master/download/evil-icons.sketch") Sketch
+
         small .ai file for designers
+
 
 
     h2
