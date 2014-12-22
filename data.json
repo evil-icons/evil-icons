@@ -3,5 +3,6 @@
   "shortDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
   "longDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
   "repo": "https://github.com/outpunk/evil-icons",
-  "image": "http://evil-icons.io/assets/images/evil-icons.png"
+  "image": "http://evil-icons.io/assets/images/evil-icons.png",
+  "downloadLocation": "https://github.com/outpunk/evil-icons/raw/master/download"
 }
