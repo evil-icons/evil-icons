@@ -89,7 +89,7 @@ html(itemscope itemtype="http://schema.org/Code")
           | Download
           != icons.icon("ei-chevron-down")
           select(data-block="download")
-            option(disabled selected) Choose format:
+            option(disabled selectedo) Choose format:
             option(value="#{data.downloadLocation}/evil-icons.svg") SVG
             option(value="#{data.downloadLocation}/evil-icons.ai") Illustrator CC
             option(value="#{data.downloadLocation}/evil-icons-cs.ai") Illustrator CS
@@ -140,12 +140,12 @@ html(itemscope itemtype="http://schema.org/Code")
 
 
       figure.about__person(itemprop="author" itemscope itemtype="http://schema.org/Person")
-        a(href="https://twitter.com/outpunk" itemprop="url")
+        a(href="https://twitter.com/outpunk" itemprop="url" data-block="avatar" data-name="sasha")
           img(src="/assets/images/sasha.jpg" itemprop="image")
           figcaption(itemprop="name") Alexander Madyankin
 
       figure.about__person(itemprop="author" itemscope itemtype="http://schema.org/Person")
-        a(href="https://twitter.com/romanshamin" itemprop="url")
+        a(href="https://twitter.com/romanshamin" itemprop="url" data-block="avatar" data-name="roma")
           img(src="/assets/images/roma.jpg" itemprop="image")
           figcaption(itemprop="name") Roman Shamin
 
