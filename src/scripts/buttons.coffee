@@ -11,7 +11,7 @@ $ ->
     val = $(@).val()
     $(@).prop("selectedIndex", -1)
     ga("send", "event", "button", "click", "download", val)
-    location.href = val
+    setTimeout (-> location.href = val), 100
 
 
 
