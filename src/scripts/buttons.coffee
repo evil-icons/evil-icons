@@ -8,10 +8,13 @@ $ ->
 
 
   $("[data-block='download']").on "change", ->
-    val = $(@).val()
+    href = $(@).val()
     $(@).prop("selectedIndex", -1)
-    ga("send", "event", "button", "click", val)
-    setTimeout (-> location.href = val), 100
+
+    [..., file] = href.split("/")
+    ga("send", "event", "button", "click", file)
+
+    setTimeout (-> location.href = href), 100
 
 
 
