@@ -1,6 +1,6 @@
 ![](http://evil-icons.io/assets/images/evil-icons.png)
 
-Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Node.js package or a Ruby gem (for Rails). Just use icon names with your templates and styles — and all the rest will be done automagically.
+Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Ruby gem, a Node.js package and Grunt/Gulp plugins. Just use icon names with your templates and styles — and all the rest will be done automagically.
 
 [evil-icons.io](http://evil-icons.io)
 
