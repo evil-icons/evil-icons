@@ -21,11 +21,11 @@ We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4
 http://caniuse.com/#search=inline
 
 ### Grunt
-Use the the [Grunt plugin].
+Use the [Grunt plugin].
 [Grunt plugin]: https://github.com/outpunk/grunt-evil-icons
 
 ### Gulp
-Use the the [Gulp plugin].
+Use the [Gulp plugin].
 [Gulp plugin]: https://github.com/outpunk/gulp-evil-icons
 
 ### Rails
@@ -163,7 +163,6 @@ An icon's color can be changed in CSS:
 
 ## Roadmap
 * Custom icons
-* Gulp plugin
 * Bower package
 * CDN version
 * More styles
