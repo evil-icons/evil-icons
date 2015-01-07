@@ -52,8 +52,6 @@ html(itemscope itemtype="http://schema.org/Code")
 
 
   body.red
-    != icons.sprite
-
     .github-ribbon
       .github-ribbon__inner
         a(href=data.repo) Evil Icons on GitHub
@@ -87,7 +85,7 @@ html(itemscope itemtype="http://schema.org/Code")
       .header__btn.header__download
         span.btn
           | Download
-          != icons.icon("ei-chevron-down")
+          icon(name="ei-chevron-down")
           select(data-block="download")
             option(disabled selected) Choose format:
             option(value="#{data.downloadLocation}/evil-icons.svg.zip") SVG
@@ -95,7 +93,7 @@ html(itemscope itemtype="http://schema.org/Code")
             option(value="#{data.downloadLocation}/evil-icons-cs.ai") Illustrator CS
             option(value="#{data.downloadLocation}/evil-icons.sketch") Sketch
 
-        small SVG, AI & Sketch for designers
+        small .ai file for designers
 
 
 
@@ -112,7 +110,7 @@ html(itemscope itemtype="http://schema.org/Code")
 
       each icon in iconNames
         figure.icons__plate
-          != icons.icon(icon, {size: "m"})
+          icon(name=icon size="m")
           figcaption
             span.capitalized
               != helpers.capitalize(icon)
@@ -157,7 +155,7 @@ html(itemscope itemtype="http://schema.org/Code")
       p Evil Icons licensed under MIT License
       a(href=data.repo)
         | GitHub Repo
-        != icons.icon("ei-external-link")
+        icon(name="ei-external-link")
 
     #fb-root
 
