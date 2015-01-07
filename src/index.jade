@@ -69,7 +69,12 @@ html(itemscope itemtype="http://schema.org/Code")
       h1
         | Evil Icons
         sup v.#{version}
-      p= data.shortDescription
+      p
+        | Simple and clean SVG icon pack with the code to support Rails, Sinatra, Node.js,
+        = " "
+        a(href="https://github.com/outpunk/gulp-evil-icons") Gulp
+        | &nbsp;and&nbsp;
+        a(href="https://github.com/outpunk/grunt-evil-icons") Grunt
       .likes
         .likes__gh
           iframe(src="http://ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="100" frameborder="0" scrolling="0" allowTransparency="true")

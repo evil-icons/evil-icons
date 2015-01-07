@@ -1,7 +1,7 @@
 {
   "title": "Evil Icons",
-  "shortDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
-  "longDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra and Node.js",
+  "shortDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra, Node.js, Gulp and Grunt",
+  "longDescription": "Simple and clean SVG icon pack with the code to support Rails, Sinatra, Node.js, Gulp and Grunt",
   "repo": "https://github.com/outpunk/evil-icons",
   "image": "http://evil-icons.io/assets/images/evil-icons.png",
   "downloadLocation": "https://github.com/outpunk/evil-icons/raw/master/download"
