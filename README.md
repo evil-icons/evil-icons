@@ -25,7 +25,7 @@ Use the the [Grunt plugin].
 [Grunt plugin]: https://github.com/outpunk/grunt-evil-icons
 
 ### Gulp
-Coming soon ;)
+[Gulp plugin]: https://github.com/outpunk/gulp-evil-icons
 
 ### Rails
 
