@@ -163,6 +163,5 @@ An icon's color can be changed in CSS:
 
 ## Roadmap
 * Custom icons
-* Bower package
 * CDN version
 * More styles
