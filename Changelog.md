@@ -1,3 +1,6 @@
+## v1.5.0
+Added iconizeHtml method to the NPM package
+
 ## v1.4.0
 * Added credit card, like and trophy icons
 
