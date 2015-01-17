@@ -14,7 +14,7 @@
     "gulp-concat": "^2.4.2",
     "gulp-connect": "^2.2.0",
     "gulp-cssmin": "^0.1.6",
-    "gulp-evil-icons": "^0.1.0",
+    "gulp-evil-icons": "^0.1.4",
     "gulp-imagemin": "^1.2.1",
     "gulp-inline-base64": "^0.1.4",
     "gulp-jade": "^0.9.0",
