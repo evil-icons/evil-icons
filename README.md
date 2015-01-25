@@ -37,7 +37,9 @@ gem 'evil_icons'
 
 Add the Evil Icons require to your `application.css`:
 ```css
-//= require evil-icons
+/*
+ *= require evil-icons
+ */
 ```
 
 Next, you have to render the evil-icons sprite in your template (or, in your layout):
@@ -95,9 +97,11 @@ require 'sinatra/asset_pipeline'
 register Sinatra::AssetPipeline
 ```
 
-Finally, add the evil icons require to your `application.css`:
+Finally, add the Evil Icons require to your `application.css`:
 ```css
-//= require evil-icons
+/*
+ *= require evil-icons
+ */
 ```
 
 Also, you can take a look at [example app] by [@aderyabin].
