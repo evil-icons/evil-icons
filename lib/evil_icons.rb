@@ -26,6 +26,10 @@ module EvilIcons
       File.join(root_dir, 'assets', 'sprite.svg')
     end
 
+    def js_sprite_file
+      File.join(root_dir, 'assets', 'evil-icons.js')
+    end
+
     def images_dir
       File.join(root_dir, 'assets', 'icons')
     end

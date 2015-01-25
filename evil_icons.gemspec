@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "nokogiri", "~> 1.6"
   spec.add_development_dependency "bundler",  "~> 1.6"
   spec.add_development_dependency "rake",     "~> 10.4"
+  spec.add_development_dependency "uglifier", "~> 2.7.0"
 end
