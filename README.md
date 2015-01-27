@@ -16,6 +16,15 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 
 ## Usage
 
+* [Supported browsers](#supported-browsers)
+* [Grunt](#grunt)
+* [Gulp](#gulp)
+* [CDN](#cdn)
+* [Rails](#rails)
+* [Sinatra](#sinatra)
+* [npm](#npm)
+* [Styling](#styling)
+
 ### Supported browsers
 We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4+.
 http://caniuse.com/#search=inline
