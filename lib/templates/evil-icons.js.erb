@@ -9,7 +9,7 @@
   "use strict";
 
   function renderSprite() {
-    var sprite = "<%= sprite("svg_sprite").gsub('"', '\"') %>";
+    var sprite = "<%= sprite("sprite.svg").gsub('"', '\"') %>";
     document.querySelector("body").insertAdjacentHTML("afterbegin", sprite);
   }
 

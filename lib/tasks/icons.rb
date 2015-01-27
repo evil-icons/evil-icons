@@ -1,5 +1,7 @@
 require "evil_icons"
 require "evil_icons/generator"
+require "uglifier"
+require 'csso'
 
 svg_path = EvilIcons.images_dir
 
@@ -8,8 +10,8 @@ namespace :evil_icons do
   desc "Generate SVG icons sprite"
   task :process => [:normalize_filenames, :optimize] do
     generator = EvilIcons::Generator.new(svg_path)
-    generator.write(EvilIcons.sprite_file,    'svg_sprite')
-    generator.write(EvilIcons.js_sprite_file, 'cdn')
+    generator.generate("sprite.svg")
+    generator.generate("evil-icons.js")
   end
 
   desc "Normalize filenames"
@@ -30,6 +32,23 @@ namespace :evil_icons do
   desc "Optimize SVG"
   task :optimize do
     system "svgo -f #{svg_path} --disable=mergePaths"
+  end
+
+  desc "Minimize assets"
+  task :minimize do
+    source_js   = File.join(EvilIcons.assets_dir, "evil-icons.js")
+    compiled_js = File.join(EvilIcons.assets_dir, "evil-icons.min.js")
+
+    f = File.new(compiled_js, "w")
+    f.write Uglifier.compile(File.read(source_js))
+    f.close
+
+    source_css   = File.join(EvilIcons.assets_dir, "evil-icons.css")
+    compiled_css = File.join(EvilIcons.assets_dir, "evil-icons.min.css")
+
+    f = File.new(compiled_css, "w")
+    f.write Csso.optimize(File.read(source_css))
+    f.close
   end
 
   desc "Publish packages"

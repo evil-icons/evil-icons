@@ -1,6 +1,6 @@
 require "nokogiri"
 require "erb"
-require "uglifier"
+require "evil_icons"
 
 module EvilIcons
 
@@ -41,14 +41,7 @@ module EvilIcons
     end
 
     def optimize(code, template)
-      case template
-      when 'svg_sprite'
-        code.gsub(/$\s+/, '')
-      when 'cdn'
-        Uglifier.compile(code)
-      else
-        code
-      end
+      template == 'sprite.svg' ? code.gsub(/$\s+/, '') : code
     end
 
     def sprite(template)
@@ -57,8 +50,9 @@ module EvilIcons
       optimize(result, template)
     end
 
-    def write(sprite_path, template)
-      file = File.new(sprite_path, 'w')
+    def generate(template)
+      path = File.join(EvilIcons.assets_dir, template)
+      file = File.new(path, 'w')
       file.write sprite(template)
       file.close
     end
