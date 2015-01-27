@@ -30,6 +30,10 @@ module EvilIcons
       File.join(assets_dir, 'icons')
     end
 
+    def sprite_file
+      File.join(root_dir, 'assets', 'sprite.svg')
+    end
+
     private
 
     def register_engine
