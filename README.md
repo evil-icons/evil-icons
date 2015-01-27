@@ -28,6 +28,25 @@ Use the [Grunt plugin].
 Use the [Gulp plugin].
 [Gulp plugin]: https://github.com/outpunk/gulp-evil-icons
 
+### CDN
+
+Just include the assets into your page from CDN:
+
+```html
+<script src="//cdn.jsdelivr.net/evil-icons/1.5.0/evil-icons.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/evil-icons/1.5.0/evil-icons.min.css">
+```
+
+And use the icons like this:
+
+```html
+<div data-icon="ei-archive"></div>
+<div data-icon="ei-chart" data-size="s"></div>
+<div data-icon="ei-check" data-size="m"></div>
+<div data-icon="ei-spinner" data-size="m"></div>
+<div data-icon="ei-cart" data-size="l" class="foo"></div>
+```
+
 ### Rails
 
 Add the `'evil_icons'` gem to your Gemfile:
@@ -167,5 +186,4 @@ An icon's color can be changed in CSS:
 
 ## Roadmap
 * Custom icons
-* CDN version
 * More styles
