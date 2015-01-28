@@ -27,7 +27,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 
 ### Supported browsers
 We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4+.
-http://caniuse.com/#search=inline
+http://caniuse.com/#search=inline%20svg
 
 ### Grunt
 Use the [Grunt plugin].
