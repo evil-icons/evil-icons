@@ -7,7 +7,7 @@
     "coffee-script": "^1.8.0",
     "connect": "^3.3.3",
     "del": "^0.1.3",
-    "evil-icons": "^1.5.0",
+    "evil-icons": "^1.6.0",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-coffee": "^2.2.0",
