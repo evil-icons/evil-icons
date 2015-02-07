@@ -12,6 +12,7 @@ namespace :evil_icons do
     generator = EvilIcons::Generator.new(svg_path)
     generator.generate("sprite.svg")
     generator.generate("evil-icons.js")
+    Rake::Task["evil_icons:minimize"].invoke
   end
 
   desc "Normalize filenames"
