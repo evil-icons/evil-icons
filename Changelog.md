@@ -1,3 +1,6 @@
+## v1.6.0
+* Added camera, Odnoklassniki, Soundcloud, Tumblr, Youtube, Vimeo and Skype icons
+
 ## v1.5.0
 * Added iconizeHtml method to the NPM package
 

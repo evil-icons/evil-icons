@@ -1,6 +1,6 @@
 {
   "name": "evil-icons",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Evil Icons is a set of SVG icons designed extensively for using in modern web projects",
   "main": "evil-icons.js",
   "scripts": {
