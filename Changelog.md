@@ -1,3 +1,6 @@
+## v1.7.0
+* Added brand colors for social icons
+
 ## v1.6.0
 * Added camera, Odnoklassniki, Soundcloud, Tumblr, Youtube, Vimeo and Skype icons
 
