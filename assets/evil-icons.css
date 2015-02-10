@@ -67,3 +67,54 @@
           animation: spin 1.5s linear infinite;
 }
 
+.icon--ei-sc-facebook {
+  fill: #3b5998;
+}
+
+.icon--ei-sc-github {
+  fill: #333;
+}
+
+.icon--ei-sc-google-plus {
+  fill: #dd4b39;
+}
+
+.icon--ei-sc-instagram {
+  fill: #3f729b;
+}
+
+.icon--ei-sc-linkedin {
+  fill: #0976b4;
+}
+
+.icon--ei-sc-odnoklassniki {
+  fill: #ed812b;
+}
+
+.icon--ei-sc-skype {
+  fill: #00aff0;
+}
+
+.icon--ei-sc-soundcloud {
+  fill: #f80;
+}
+
+.icon--ei-sc-tumblr {
+  fill: #35465c;
+}
+
+.icon--ei-sc-twitter {
+  fill: #55acee;
+}
+
+.icon--ei-sc-vimeo {
+  fill: #1ab7ea;
+}
+
+.icon--ei-sc-vk {
+  fill: #45668e;
+}
+
+.icon--ei-sc-youtube {
+  fill: #e52d27;
+}
