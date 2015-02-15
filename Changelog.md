@@ -1,3 +1,6 @@
+## v1.7.1
+* Crisp fix for non-retina screens, thanks to habrauser SVGen
+
 ## v1.7.0
 * Added brand colors for social icons
 

@@ -26,6 +26,8 @@
   height: 100%;
   background: inherit;
   fill: inherit;
+  transform: translateX(0); /* Crisp fix for non-retina */
+  -ms-transform: translate(0.5px, -0.3px); /* Crisp fix for IE */
 }
 
 .icon--m {
