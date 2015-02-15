@@ -1,5 +1,5 @@
 ## v1.7.1
-* Crisp fix for non-retina screens, thanks to habrauser [SVGen]
+* Crisp fix for non-retina screens, thanks to [@Ser-Gen]
 
 ## v1.7.0
 * Added brand colors for social icons
@@ -39,4 +39,4 @@
 [@aderyabin]:     https://github.com/aderyabin
 [@fliptheweb]:    https://github.com/fliptheweb
 [@legomushroom]:  https://github.com/legomushroom
-[SVGen]:          http://habrahabr.ru/users/SVGen/
+[@Ser-Gen]:       https://github.com/Ser-Gen
