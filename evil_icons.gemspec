@@ -15,6 +15,8 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir.glob("assets/*/**/**") + %w(
                         assets/sprite.svg
+                        assets/evil-icons.css
+                        assets/evil-icons.js
 
                         lib/evil_icons.rb
                         lib/evil_icons/engine.rb

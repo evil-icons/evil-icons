@@ -1,3 +1,6 @@
+## v1.7.2
+* Fixed ruby gem
+
 ## v1.7.1
 * Crisp fix for non-retina screens, thanks to [@Ser-Gen]
 
