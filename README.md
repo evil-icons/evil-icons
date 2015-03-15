@@ -23,6 +23,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 * [Rails](#rails)
 * [Sinatra](#sinatra)
 * [npm](#npm)
+* [React](#react)
 * [Styling](#styling)
 
 ### Supported browsers
@@ -174,6 +175,8 @@ icons.icon("ei-arrow-right", {size: "m"});
 icons.icon("ei-envelope", {size: "l", class: "custom-class"});
 ```
 
+### React
+Use the [React component](https://github.com/saulhoward/react-evil-icons).
 
 ### Styling
 
