@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/outpunk/evil-icons.svg?style=svg)](https://circleci.com/gh/outpunk/evil-icons)
+
 ![](http://evil-icons.io/assets/images/evil-icons.png)
 
 Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Ruby gem, a Node.js package and Grunt/Gulp plugins. Just use icon names with your templates and styles — and all the rest will be done automagically.
@@ -12,7 +14,6 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 
 [Alexander Madyankin]:  https://twitter.com/outpunk
 [Roman Shamin]:         https://twitter.com/romanshamin
-
 
 ## Usage
 
