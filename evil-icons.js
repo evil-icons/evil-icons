@@ -1,4 +1,5 @@
 var fs          = require('fs');
+var libxml      = require('libxmljs')
 var spritePath  = __dirname + '/assets/sprite.svg';
 var sprite      = fs.readFileSync(spritePath).toString();
 
@@ -27,49 +28,39 @@ function wrapSpinner(html, klass) {
   }
 }
 
-function buildParamsFromString(string) {
-  var paramsString;
-  var params = {};
+function replaceIconTags(src) {
+  var html          = src.toString();
+  var doc           = libxml.parseHtmlString(html);
+  var iconElements  = doc.find('//icon');
 
-  var string = string.trim().replace(/['"]/gi, '');
+  iconElements.forEach(function(element) {
+    var name = element.attr('name').value();
 
-  string.split(' ').forEach(function(param) {
-    var param = param.split('=');
-    var key   = param[0];
-    var value = param[1];
+    var params = {
+      size:   element.attr('size') && element.attr('size').value(),
+      class:  element.attr('class') && element.attr('class').value()
+    };
 
-    params[key] = value;
+    var newElement = libxml.parseHtmlString(icon(name, params));
+    element.addNextSibling(newElement.find('//div')[0]);
+    element.remove();
   });
 
-  return params;
-}
-
-function replaceIconTags(src) {
-  var match, tag, params, name;
-  var html = src.toString();
-  var iconRegexp = /<icon\s+([-=\w\d'"\s]+)\s*\/?>(<\/icon>)?/gi;
-
-  while (match = iconRegexp.exec(html)) {
-    tag     = match[0];
-    params  = buildParamsFromString(match[1]);
-    name    = params.name;
-
-    delete params.name;
-
-    html = html.replace(tag, icon(name, params));
-  }
-
-  return html;
+  return doc.root().toString();
 }
 
 function iconizeHtml(src) {
-  var html = src.toString();
+  var html      = src.toString();
+  var doc       = libxml.parseHtmlString(html);
+  var noSprite  = doc.find('//svg[@id="ei-sprite"]').length == 0;
 
-  if (html.indexOf(sprite) == -1) {
-    html = html.replace(/<body.*?>/, function(match) { return match + sprite });
+  html = replaceIconTags(html);
+
+  if (noSprite) {
+    html = html.replace(/<body.*?>/, function(match) { return match + sprite; });
   }
 
-  return replaceIconTags(html);
+  return html;
 }
 
 module.exports = {

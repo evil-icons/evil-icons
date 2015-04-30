@@ -1,4 +1,5 @@
 var assert  = require('assert');
+var libxml  = require('libxmljs');
 var icons   = require('../evil-icons');
 
 describe('Evil Icons', function() {
@@ -64,73 +65,90 @@ describe('Evil Icons', function() {
   describe('iconizeHtml', function() {
 
     function doc(html) {
-      var head = '<!DOCTYPE html><html><head><title>Evil Icons</title></head>';
-      return head + html;
+      var html    = html || '';
+      var result  = '<!DOCTYPE html><html>' +
+                    '<head><title>Evil Icons</title></head>' +
+                    html + '</html>';
+      return result;
     }
 
     function docWithSprite(html) {
-      return doc('<body>' + icons.sprite + html + '</body>');
+      return doc(html);
+    }
+
+    function find(html, xpath) {
+      var parsedHtml = libxml.parseHtmlString(html);
+      return parsedHtml.find(xpath);
     }
 
     it('renders sprite', function() {
-      var actual    = icons.iconizeHtml(doc('<body> </body>'));
-      var expected  = doc('<body>' + icons.sprite + ' </body>');
+      var html    = icons.iconizeHtml(doc('<body></body>'));
+      var sprite  = find(html, '//svg[@id="ei-sprite"]');
 
-      assert.equal(actual, expected);
+      assert(sprite.length == 1);
 
-      actual    = icons.iconizeHtml(doc('<body class=red> </body>'));
-      expected  = doc('<body class=red>' + icons.sprite + ' </body>');
+      html    = icons.iconizeHtml(doc('<body class=red data-attr="a"></body>'));
+      sprite  = find(html, '//svg[@id="ei-sprite"]');
 
-      assert.equal(actual, expected);
-
-      actual    = icons.iconizeHtml(doc('<body class=red data-attr="a"> </body>'));
-      expected  = doc('<body class=red data-attr="a">' + icons.sprite + ' </body>');
-
-      assert.equal(actual, expected);
+      assert(sprite.length == 1);
     });
 
     it('doesn\'t render sprite twice', function() {
-      var expected  = doc('<body>' + icons.sprite + ' </body>');
-      var actual    = icons.iconizeHtml(doc('<body> </body>'));
-      actual        = icons.iconizeHtml(actual);
+      var html    = icons.iconizeHtml(doc('<body> </body>'));
+      html        = icons.iconizeHtml(html);
+      var sprite  = find(html, '//svg[@id="ei-sprite"]');
 
-      assert.equal(actual, expected);
+      assert(sprite.length == 1);
     });
 
     it('replaces single icon tag', function() {
-      var html      = docWithSprite('<icon name="ei-archive" />');
-      var actual    = icons.iconizeHtml(html);
-      var expected  = docWithSprite(icons.icon('ei-archive'));
+      var html  = doc('<body> <icon name="ei-archive" /> </body>');
+      html      = icons.iconizeHtml(html);
+      var icon  = find(html, '//div[@class="icon icon--ei-archive"]');
 
-      assert.equal(actual, expected);
+      assert(icon.length == 1);
     });
 
     it('replaces multiple icon tags', function() {
-      var html = docWithSprite(
+      var html = doc(
+        '<body>' +
         '<p>Some&nbsp;entities</p>\n' +
         '<icon name="ei-archive" />\n' +
-        '<a href="http://evil-icons.io>Evil Icons</a>\n' +
-        '<icon name="ei-search" />\n'
+        '<a href="http://evil-icons.io">Evil Icons</a>\n' +
+        '<icon name="ei-search" />\n' +
+        '</body>'
       );
 
-      var expected  = docWithSprite(
-        '<p>Some&nbsp;entities</p>\n' +
-        icons.icon('ei-archive') + '\n' +
-        '<a href="http://evil-icons.io>Evil Icons</a>\n' +
-        icons.icon('ei-search') + '\n'
-      );
+      html        = icons.iconizeHtml(html);
+      var first   = find(html, '//div[@class="icon icon--ei-archive"]');
+      var second  = find(html, '//div[@class="icon icon--ei-search"]');
 
-      var actual = icons.iconizeHtml(html);
-
-      assert.equal(actual, expected);
+      assert(first.length == 1, 'First icon failed');
+      assert(second.length == 1, 'Second icon failed');
     });
 
     it('respects icon size attr', function() {
-      var html      = docWithSprite('<icon name="ei-archive" size="l" />');
-      var actual    = icons.iconizeHtml(html);
-      var expected  = docWithSprite(icons.icon('ei-archive', {size: 'l'}));
+      var html  = docWithSprite('<icon name="ei-archive" size="l" />');
+      html      = icons.iconizeHtml(html);
+      var icon  = find(html, '//div[@class="icon icon--ei-archive icon--l"]');
 
-      assert.equal(actual, expected);
+      assert(icon.length == 1);
+    });
+
+    it('respects classes', function() {
+      var html = doc(
+        '<body>' +
+        '<icon name="ei-archive" class="foo" />' +
+        '<icon name="ei-archive" class="foo bar" />' +
+        '</body>'
+      );
+
+      html        = icons.iconizeHtml(html);
+      var foo     = find(html, '//div[@class="icon icon--ei-archive foo"]');
+      var foobar  = find(html, '//div[@class="icon icon--ei-archive foo bar"]');
+
+      assert(foo.length == 1, 'Single class failed');
+      assert(foobar.length == 1, 'Multiple classes failed');
     });
 
   });
