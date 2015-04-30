@@ -1,3 +1,7 @@
+## v1.7.3
+* Fixed sprite multirendering (https://github.com/outpunk/grunt-evil-icons/issues/1)
+* Fixed multiple icon classes (#57)
+
 ## v1.7.2
 * Fixed ruby gem
 
