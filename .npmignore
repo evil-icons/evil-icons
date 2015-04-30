@@ -7,6 +7,9 @@ npm-debug.log
 *.sublime-workspace
 *.todo
 
+.travis.yml
+.jscsrc
+
 Gemfile
 Gemfile.lock
 evil_icons.gemspec
@@ -16,3 +19,4 @@ assets/ei.ai
 download
 lib
 node_modules
+test
