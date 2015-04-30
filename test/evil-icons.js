@@ -72,14 +72,15 @@ describe('Evil Icons', function() {
       return result;
     }
 
-    function docWithSprite(html) {
-      return doc(html);
-    }
-
     function find(html, xpath) {
       var parsedHtml = libxml.parseHtmlString(html);
       return parsedHtml.find(xpath);
     }
+
+    it('keeps doctype', function() {
+      var html = icons.iconizeHtml(doc('<body></body>'));
+      assert(html.indexOf('<!DOCTYPE html>') > -1);
+    });
 
     it('renders sprite', function() {
       var html    = icons.iconizeHtml(doc('<body></body>'));
@@ -128,7 +129,7 @@ describe('Evil Icons', function() {
     });
 
     it('respects icon size attr', function() {
-      var html  = docWithSprite('<icon name="ei-archive" size="l" />');
+      var html  = doc('<body> <icon name="ei-archive" size="l" /> </body>');
       html      = icons.iconizeHtml(html);
       var icon  = find(html, '//div[@class="icon icon--ei-archive icon--l"]');
 

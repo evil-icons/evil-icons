@@ -28,25 +28,31 @@ function wrapSpinner(html, klass) {
   }
 }
 
+function replaceIconElement(element) {
+  var name = element.attr('name').value();
+
+  var params = {
+    size:   element.attr('size') && element.attr('size').value(),
+    class:  element.attr('class') && element.attr('class').value()
+  };
+
+  var newElement = libxml.parseHtmlString(icon(name, params));
+  element.addNextSibling(newElement.find('//div')[0]);
+  element.remove();
+}
+
 function replaceIconTags(src) {
-  var html          = src.toString();
-  var doc           = libxml.parseHtmlString(html);
-  var iconElements  = doc.find('//icon');
+  var html = src.toString();
+  var doc  = libxml.parseHtmlString(html);
 
-  iconElements.forEach(function(element) {
-    var name = element.attr('name').value();
+  doc.find('//icon').forEach(replaceIconElement);
 
-    var params = {
-      size:   element.attr('size') && element.attr('size').value(),
-      class:  element.attr('class') && element.attr('class').value()
-    };
+  var result = doc
+    .toString()
+    .replace('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>', '')
+    .trim();
 
-    var newElement = libxml.parseHtmlString(icon(name, params));
-    element.addNextSibling(newElement.find('//div')[0]);
-    element.remove();
-  });
-
-  return doc.root().toString();
+  return result;
 }
 
 function iconizeHtml(src) {
