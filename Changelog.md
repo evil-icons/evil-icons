@@ -1,3 +1,6 @@
+## v1.7.4
+* Fixed doctype removing by the `iconizeHtml` method
+
 ## v1.7.3
 * Fixed sprite multirendering (https://github.com/outpunk/grunt-evil-icons/issues/1)
 * Fixed multiple icon classes (#57)
