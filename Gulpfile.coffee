@@ -1,5 +1,5 @@
 gulp         = require 'gulp'
-sass         = require 'gulp-ruby-sass'
+sass         = require 'gulp-sass'
 autoprefixer = require 'gulp-autoprefixer'
 cssmin       = require 'gulp-cssmin'
 jade         = require 'gulp-jade'
@@ -49,7 +49,7 @@ gulp.task 'css', ->
 
 gulp.task 'html', ->
   gulp.src 'src/index.jade'
-    .pipe jade(locals: jadeVars)
+    .pipe jade(locals: jadeVars, pretty: true)
     .pipe evilIcons()
     .pipe minifyHTML()
     .pipe gulp.dest('./')
@@ -82,9 +82,9 @@ gulp.task 'watch', ->
   gulp.watch('src/**', ['build'])
 
 
-gulp.task 'clean', (cb) ->
-  del 'index.html', cb
-  del 'assets', cb
+gulp.task 'clean', ->
+  del 'index.html'
+  del 'assets'
 
 
 gulp.task 'build', ['images', 'css', 'coffee', 'html']
