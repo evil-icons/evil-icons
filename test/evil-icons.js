@@ -88,7 +88,7 @@ describe('Evil Icons', function() {
 
       assert(sprite.length == 1);
 
-      html    = icons.iconizeHtml(doc('<body class=red data-attr="a"></body>'));
+      html    = icons.iconizeHtml(doc('<body class=red data-attr="a">\n</body>'));
       sprite  = find(html, '//svg[@id="ei-sprite"]');
 
       assert(sprite.length == 1);

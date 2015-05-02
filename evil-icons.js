@@ -29,18 +29,15 @@ function wrapSpinner(html, klass) {
 }
 
 function buildParamsFromString(string) {
-  var paramsString;
+  var match, attr, value;
   var params = {};
+  var attrsRegexp = /(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/gi;
 
-  var string = string.trim().replace(/['"]/gi, '');
-
-  string.split(' ').forEach(function(param) {
-    var param = param.split('=');
-    var key   = param[0];
-    var value = param[1];
-
-    params[key] = value;
-  });
+  while (match = attrsRegexp.exec(string)) {
+    attr  = match[1];
+    value = match[2].replace(/'|"/, '');
+    params[attr] = value;
+  }
 
   return params;
 }
