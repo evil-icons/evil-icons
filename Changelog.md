@@ -1,3 +1,6 @@
+## v1.7.5
+* Fixed html breaking
+
 ## v1.7.4
 * Fixed doctype removing by the `iconizeHtml` method
 
