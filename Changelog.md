@@ -1,3 +1,6 @@
+## v1.7.6
+* Fixed libxmljs fail
+
 ## v1.7.5
 * Fixed html breaking
 

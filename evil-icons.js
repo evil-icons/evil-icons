@@ -1,5 +1,4 @@
 var fs          = require('fs');
-var libxml      = require('libxmljs')
 var spritePath  = __dirname + '/assets/sprite.svg';
 var sprite      = fs.readFileSync(spritePath).toString();
 
