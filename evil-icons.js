@@ -28,45 +28,49 @@ function wrapSpinner(html, klass) {
   }
 }
 
-function replaceIconElement(element) {
-  var name = element.attr('name').value();
+function buildParamsFromString(string) {
+  var paramsString;
+  var params = {};
 
-  var params = {
-    size:   element.attr('size') && element.attr('size').value(),
-    class:  element.attr('class') && element.attr('class').value()
-  };
+  var string = string.trim().replace(/['"]/gi, '');
 
-  var newElement = libxml.parseHtmlString(icon(name, params));
-  element.addNextSibling(newElement.find('//div')[0]);
-  element.remove();
+  string.split(' ').forEach(function(param) {
+    var param = param.split('=');
+    var key   = param[0];
+    var value = param[1];
+
+    params[key] = value;
+  });
+
+  return params;
 }
 
 function replaceIconTags(src) {
+  var match, tag, params, name;
   var html = src.toString();
-  var doc  = libxml.parseHtmlString(html);
+  var iconRegexp = /<icon\s+([-=\w\d'"\s]+)\s*\/?>(<\/icon>)?/gi;
 
-  doc.find('//icon').forEach(replaceIconElement);
+  while (match = iconRegexp.exec(html)) {
+    tag     = match[0];
+    params  = buildParamsFromString(match[1]);
+    name    = params.name;
 
-  var result = doc
-    .toString()
-    .replace('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>', '')
-    .trim();
+    delete params.name;
 
-  return result;
-}
-
-function iconizeHtml(src) {
-  var html      = src.toString();
-  var doc       = libxml.parseHtmlString(html);
-  var noSprite  = doc.find('//svg[@id="ei-sprite"]').length == 0;
-
-  html = replaceIconTags(html);
-
-  if (noSprite) {
-    html = html.replace(/<body.*?>/, function(match) { return match + sprite; });
+    html = html.replace(tag, icon(name, params));
   }
 
   return html;
+}
+
+function iconizeHtml(src) {
+  var html = src.toString();
+
+  if (html.indexOf(sprite) == -1) {
+    html = html.replace(/<body.*?>/, function(match) { return match + sprite });
+  }
+
+  return replaceIconTags(html);
 }
 
 module.exports = {
