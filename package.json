@@ -2,9 +2,9 @@
   "name": "evil-icons",
   "version": "1.7.6",
   "description": "Evil Icons is a set of SVG icons designed extensively for using in modern web projects",
-  "main": "evil-icons.js",
+  "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jscs evil-icons.js test && ./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/jscs index.js js test && ./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
