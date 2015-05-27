@@ -1,6 +1,7 @@
 CNAME
 .git
 .DS_Store
+.sass-cache
 npm-debug.log
 *.gem
 *.sublime-project

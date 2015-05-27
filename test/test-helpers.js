@@ -1,7 +1,7 @@
 var libxml = require('libxmljs');
 
 function doc(html) {
-  var html    = html || '';
+  var html = html || '';
   var result  = '<!DOCTYPE html><html>' +
                 '<head><title>Evil Icons</title></head>' +
                 html + '</html>';
@@ -14,6 +14,6 @@ function find(html, xpath) {
 }
 
 module.exports = {
-  doc: doc,
+  doc:  doc,
   find: find
 }
