@@ -4,11 +4,11 @@ var libxml = require('libxmljs');
 var SVGO   = require('svgo');
 
 var iconsPath = path.resolve(__dirname, '../assets/icons');
+var svgo      = new SVGO({ plugins: [{ mergePaths: false }] });
 
 function optimizeIcon(icon) {
-  var svgo = new SVGO({ plugins: [{ mergePaths: false }] });
-
   var processed = false;
+
   svgo.optimize(icon.content, function(optimized) {
     icon.content = optimized.data;
     processed = true;
