@@ -2,9 +2,9 @@ var fs     = require('fs');
 var path   = require('path');
 var libxml = require('libxmljs');
 var SVGO   = require('svgo');
+var files  = require('./files');
 
-var iconsPath = path.resolve(__dirname, '../assets/icons');
-var svgo      = new SVGO({ plugins: [{ mergePaths: false }] });
+var svgo = new SVGO({ plugins: [{ mergePaths: false }] });
 
 function optimizeIcon(icon) {
   var processed = false;
@@ -38,28 +38,23 @@ function transformIcon(icon) {
 }
 
 function readIcon(file) {
-  var filepath  = path.join(iconsPath, file);
-  var content   = fs.readFileSync(filepath);
-
   return {
     name:    path.basename(file, '.svg'),
-    content: content.toString()
+    content: fs.readFileSync(file).toString()
   };
 }
 
-function sprite() {
-  var files   = fs.readdirSync(iconsPath);
-  var sprite  = '<svg xmlns="http://www.w3.org/2000/svg"' +
-                'xmlns:xlink="http://www.w3.org/1999/xlink"' +
-                'id="ei-sprite" style="display:none">';
-
-  sprite += files
+function sprite(icons) {
+  var symbols = files
+    .paths(icons)
     .map(readIcon)
     .map(optimizeIcon)
     .map(transformIcon)
     .join('');
 
-  sprite += '</svg>';
+  var sprite = '<svg xmlns="http://www.w3.org/2000/svg"' +
+                'xmlns:xlink="http://www.w3.org/1999/xlink"' +
+                'id="ei-sprite" style="display:none">' + symbols + '</svg>';
 
   return sprite;
 }
