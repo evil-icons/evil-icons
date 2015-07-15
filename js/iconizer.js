@@ -1,10 +1,10 @@
-var sprite  = require('./sprite');
-var icon    = require('./icon');
+import sprite from './sprite';
+import icon   from './icon';
 
 function buildParamsFromString(string) {
-  var match, attr, value;
-  var params = {};
-  var attrsRegexp = /(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/gi;
+  let match, attr, value;
+  const params = {};
+  const attrsRegexp = /(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/gi;
 
   while (match = attrsRegexp.exec(string)) {
     attr  = match[1];
@@ -16,9 +16,9 @@ function buildParamsFromString(string) {
 }
 
 function replaceIconTags(src) {
-  var match, tag, params, name;
-  var html = src.toString();
-  var iconRegexp = /<icon\s+([-=\w\d'"\s]+)\s*\/?>(<\/icon>)?/gi;
+  let match, tag, params, name;
+  let html = src.toString();
+  const iconRegexp = /<icon\s+([-=\w\d'"\s]+)\s*\/?>(<\/icon>)?/gi;
 
   while (match = iconRegexp.exec(html)) {
     tag     = match[0];
@@ -34,15 +34,13 @@ function replaceIconTags(src) {
 }
 
 function iconizeHtml(src) {
-  var html = src.toString();
+  let html = src.toString();
 
   if (html.indexOf(sprite()) == -1) {
-    html = html.replace(/<body.*?>/, function(match) {
-      return match + sprite();
-    });
+    html = html.replace(/<body.*?>/, (match) => match + sprite());
   }
 
   return replaceIconTags(html);
 }
 
-module.exports = iconizeHtml;
+export default iconizeHtml;

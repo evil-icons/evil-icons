@@ -1,45 +1,44 @@
-var assert  = require('assert');
-var doc     = require('./test-helpers').doc;
-var find    = require('./test-helpers').find;
-var icons   = require('../index');
+import assert        from 'assert';
+import { doc, find } from './test-helpers';
+import icons         from '../index';
 
-describe('iconizeHtml', function() {
+describe('iconizeHtml', () => {
 
-  it('keeps doctype', function() {
-    var html = icons.iconizeHtml(doc('<body></body>'));
-    assert(html.indexOf('<!DOCTYPE html>') > -1);
+  it('keeps doctype', () => {
+    const html = icons.iconizeHtml(doc('<body></body>'));
+    assert.notEqual(html.indexOf('<!DOCTYPE html>'), -1);
   });
 
-  it('renders sprite', function() {
-    var html    = icons.iconizeHtml(doc('<body></body>'));
-    var sprite  = find(html, '//svg[@id="ei-sprite"]');
+  it('renders sprite', () => {
+    let html    = icons.iconizeHtml(doc('<body></body>'));
+    let sprite  = find(html, '//svg[@id="ei-sprite"]');
 
-    assert(sprite.length == 1);
+    assert.equal(sprite.length, 1);
 
     html    = icons.iconizeHtml(doc('<body class=red data-attr="a">\n</body>'));
     sprite  = find(html, '//svg[@id="ei-sprite"]');
 
-    assert(sprite.length == 1);
+    assert.equal(sprite.length, 1);
   });
 
-  it('doesn\'t render sprite twice', function() {
-    var html    = icons.iconizeHtml(doc('<body> </body>'));
+  it('doesn\'t render sprite twice', () => {
+    let html      = icons.iconizeHtml(doc('<body> </body>'));
+    html          = icons.iconizeHtml(html);
+    const sprite  = find(html, '//svg[@id="ei-sprite"]');
+
+    assert.equal(sprite.length, 1);
+  });
+
+  it('replaces single icon tag', () => {
+    let html    = doc('<body> <icon name="ei-archive" /> </body>');
     html        = icons.iconizeHtml(html);
-    var sprite  = find(html, '//svg[@id="ei-sprite"]');
+    const icon  = find(html, '//div[@class="icon icon--ei-archive"]');
 
-    assert(sprite.length == 1);
+    assert.equal(icon.length, 1);
   });
 
-  it('replaces single icon tag', function() {
-    var html  = doc('<body> <icon name="ei-archive" /> </body>');
-    html      = icons.iconizeHtml(html);
-    var icon  = find(html, '//div[@class="icon icon--ei-archive"]');
-
-    assert(icon.length == 1);
-  });
-
-  it('replaces multiple icon tags', function() {
-    var html = doc(
+  it('replaces multiple icon tags', () => {
+    let html = doc(
       '<body>' +
       '<p>Some&nbsp;entities</p>\n' +
       '<icon name="ei-archive" />\n' +
@@ -48,36 +47,36 @@ describe('iconizeHtml', function() {
       '</body>'
     );
 
+    html          = icons.iconizeHtml(html);
+    const first   = find(html, '//div[@class="icon icon--ei-archive"]');
+    const second  = find(html, '//div[@class="icon icon--ei-search"]');
+
+    assert.equal(first.length, 1, 'First icon failed');
+    assert.equal(second.length, 1, 'Second icon failed');
+  });
+
+  it('respects icon size attr', () => {
+    let html    = doc('<body> <icon name="ei-archive" size="l" /> </body>');
     html        = icons.iconizeHtml(html);
-    var first   = find(html, '//div[@class="icon icon--ei-archive"]');
-    var second  = find(html, '//div[@class="icon icon--ei-search"]');
+    const icon  = find(html, '//div[@class="icon icon--ei-archive icon--l"]');
 
-    assert(first.length == 1, 'First icon failed');
-    assert(second.length == 1, 'Second icon failed');
+    assert.equal(icon.length, 1);
   });
 
-  it('respects icon size attr', function() {
-    var html  = doc('<body> <icon name="ei-archive" size="l" /> </body>');
-    html      = icons.iconizeHtml(html);
-    var icon  = find(html, '//div[@class="icon icon--ei-archive icon--l"]');
-
-    assert(icon.length == 1);
-  });
-
-  it('respects classes', function() {
-    var html = doc(
+  it('respects classes', () => {
+    let html = doc(
       '<body>' +
       '<icon name="ei-archive" class="foo" />' +
       '<icon name="ei-archive" class="foo bar" />' +
       '</body>'
     );
 
-    html        = icons.iconizeHtml(html);
-    var foo     = find(html, '//div[@class="icon icon--ei-archive foo"]');
-    var foobar  = find(html, '//div[@class="icon icon--ei-archive foo bar"]');
+    html          = icons.iconizeHtml(html);
+    const foo     = find(html, '//div[@class="icon icon--ei-archive foo"]');
+    const foobar  = find(html, '//div[@class="icon icon--ei-archive foo bar"]');
 
-    assert(foo.length == 1, 'Single class failed');
-    assert(foobar.length == 1, 'Multiple classes failed');
+    assert.equal(foo.length, 1, 'Single class failed');
+    assert.equal(foobar.length, 1, 'Multiple classes failed');
   });
 
 });

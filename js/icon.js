@@ -1,26 +1,22 @@
-function icon(name, options) {
-  var options = options || {};
-  var size    = options.size ? ' icon--' + options.size : '';
-  var classes = 'icon icon--' + name + size + ' ' + (options.class || '');
-  classes     = classes.trim();
-
-  var icon =  '<svg class="icon__cnt">' +
-                '<use xlink:href="#' + name + '-icon" />' +
-              '</svg>';
-
-  var html =  '<div class="' + classes + '">' +
-                wrapSpinner(icon, classes) +
-              '</div>';
-
-  return html;
+function getClasses(name, options) {
+  const size = options.size ? ` icon--${ options.size }` : '';
+  const customClass = options.class || '';
+  return `icon icon--${ name }${ size } ${ customClass }`.trim();
 }
 
 function wrapSpinner(html, classes) {
-  if (classes.indexOf('spinner') > -1) {
-    return '<div class="icon__spinner">' + html + '</div>';
-  } else {
-    return html;
-  }
+  if (classes.indexOf('spinner') == -1) return html;
+  return `<div class="icon__spinner">${ html }</div>`;
 }
 
-module.exports = icon;
+function icon(name, options = {}) {
+  const classes = getClasses(name, options);
+  const icon    = '<svg class="icon__cnt">' +
+                    `<use xlink:href="#${ name }-icon" />` +
+                  '</svg>';
+  const inner   = wrapSpinner(icon, classes);
+
+  return `<div class="${ classes }">${ inner }</div>`;
+}
+
+export default icon;

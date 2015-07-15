@@ -1,15 +1,15 @@
-var fs     = require('fs');
-var path   = require('path');
-var libxml = require('libxmljs');
-var SVGO   = require('svgo');
-var files  = require('./files');
+import fs     from 'fs';
+import path   from 'path';
+import libxml from 'libxmljs';
+import SVGO   from 'svgo';
+import files  from './files';
 
-var svgo = new SVGO({ plugins: [{ mergePaths: false }] });
+const svgo = new SVGO({ plugins: [{ mergePaths: false }] });
 
 function optimizeIcon(icon) {
-  var processed = false;
+  let processed = false;
 
-  svgo.optimize(icon.content, function(optimized) {
+  svgo.optimize(icon.content, (optimized) => {
     icon.content = optimized.data;
     processed = true;
   });
@@ -22,15 +22,15 @@ function optimizeIcon(icon) {
 }
 
 function transformIcon(icon) {
-  var svg     = libxml.parseHtmlString(icon.content);
-  var root    = svg.find('//svg')[0];
-  var viewBox = root.attr('viewbox').value();
-  var content = root
+  const svg     = libxml.parseHtmlString(icon.content);
+  const root    = svg.find('//svg')[0];
+  const viewBox = root.attr('viewbox').value();
+  const content = root
     .childNodes()
-    .map(function(node) { return node.toString() })
+    .map(node => node.toString())
     .join('');
 
-  var symbol =  '<symbol id="' + icon.name + '" viewBox="' + viewBox + '">' +
+  var symbol =  `<symbol id="${ icon.name }" viewBox="${ viewBox }">` +
                   content +
                 '</symbol>';
 
@@ -54,9 +54,9 @@ function sprite(icons) {
 
   var sprite = '<svg xmlns="http://www.w3.org/2000/svg"' +
                 'xmlns:xlink="http://www.w3.org/1999/xlink"' +
-                'id="ei-sprite" style="display:none">' + symbols + '</svg>';
+                `id="ei-sprite" style="display:none">${ symbols }</svg>`;
 
   return sprite;
 }
 
-module.exports = sprite;
+export default sprite;

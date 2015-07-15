@@ -21,3 +21,4 @@ tmp
 *.a
 mkmf.log
 node_modules
+es5

@@ -1,5 +1,6 @@
 {
   "preset": "airbnb",
+  "esnext": true,
   "disallowMultipleVarDecl": "exceptUndefined",
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
   "disallowQuotedKeysInObjects": "allButReserved"

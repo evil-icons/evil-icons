@@ -1,11 +1,6 @@
-var icon      = require('./icon');
-var sprite    = require('./sprite');
-var iconizer  = require('./iconizer');
-var files     = require('./files');
+import icon        from './icon';
+import sprite      from './sprite';
+import iconizer    from './iconizer';
+import { setDirs } from './files';
 
-module.exports = {
-  iconizeHtml:  iconizer,
-  sprite:       sprite,
-  icon:         icon,
-  setDirs:      files.setDirs
-};
+export default { sprite, icon, setDirs, iconizeHtml: iconizer };
