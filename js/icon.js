@@ -5,7 +5,7 @@ function getClasses(name, options) {
 }
 
 function wrapSpinner(html, classes) {
-  if (classes.indexOf('spinner') == -1) return html;
+  if (classes.indexOf('spinner') === -1) return html;
   return `<div class="icon__spinner">${ html }</div>`;
 }
 

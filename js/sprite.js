@@ -1,8 +1,9 @@
-import fs     from 'fs';
-import path   from 'path';
-import libxml from 'libxmljs';
-import SVGO   from 'svgo';
-import files  from './files';
+import fs        from 'fs';
+import path      from 'path';
+import libxml    from 'libxmljs';
+import SVGO      from 'svgo';
+import files     from './files';
+import templates from './templates';
 
 const svgo = new SVGO({ plugins: [{ mergePaths: false }] });
 
@@ -22,6 +23,7 @@ function optimizeIcon(icon) {
 }
 
 function transformIcon(icon) {
+  const name    = icon.name;
   const svg     = libxml.parseHtmlString(icon.content);
   const root    = svg.find('//svg')[0];
   const viewBox = root.attr('viewbox').value();
@@ -30,11 +32,7 @@ function transformIcon(icon) {
     .map(node => node.toString())
     .join('');
 
-  var symbol =  `<symbol id="${ icon.name }" viewBox="${ viewBox }">` +
-                  content +
-                '</symbol>';
-
-  return symbol;
+  return templates.symbol({ name, viewBox, content });
 }
 
 function readIcon(file) {
@@ -52,11 +50,7 @@ function sprite(icons) {
     .map(transformIcon)
     .join('');
 
-  var sprite = '<svg xmlns="http://www.w3.org/2000/svg"' +
-                'xmlns:xlink="http://www.w3.org/1999/xlink"' +
-                `id="ei-sprite" style="display:none">${ symbols }</svg>`;
-
-  return sprite;
+  return templates.sprite(symbols);
 }
 
 export default sprite;

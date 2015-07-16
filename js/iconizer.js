@@ -7,9 +7,8 @@ function buildParamsFromString(string) {
   const attrsRegexp = /(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/gi;
 
   while (match = attrsRegexp.exec(string)) {
-    attr  = match[1];
-    value = match[2].replace(/'|"/, '');
-    params[attr] = value;
+    [, attr, value] = match;
+    params[attr] = value.replace(/'|"/, '');
   }
 
   return params;
@@ -36,8 +35,8 @@ function replaceIconTags(src) {
 function iconizeHtml(src) {
   let html = src.toString();
 
-  if (html.indexOf(sprite()) == -1) {
-    html = html.replace(/<body.*?>/, (match) => match + sprite());
+  if (html.indexOf(sprite()) === -1) {
+    html = html.replace(/<body.*?>/, match => match + sprite());
   }
 
   return replaceIconTags(html);
