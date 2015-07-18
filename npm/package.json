@@ -4,11 +4,14 @@
   "description": "Evil Icons is a set of SVG icons designed extensively for using in modern web projects",
   "main": "es5/index.js",
   "scripts": {
-    "pretest": "jscs index.js js test",
+    "pretest": "jscs index.js js test && npm run linkassets",
     "test": "mocha --require babel/register",
+    "posttest": "rm -rf assets",
     "transpile": "babel index.js js/*.js -d es5/",
-    "prepublish": "npm run transpile",
-    "postpublish": "rm -rf es5/"
+    "prepublish": "npm run transpile && npm run copyassets",
+    "postpublish": "rm -rf es5/ assets/",
+    "copyassets": "rm -rf assets && cp -R ../assets .",
+    "linkassets": "rm -rf assets && ln -s ../assets"
   },
   "repository": {
     "type": "git",

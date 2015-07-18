@@ -20,5 +20,8 @@ tmp
 *.o
 *.a
 mkmf.log
+
 node_modules
 es5
+npm-debug.log
+npm/assets
