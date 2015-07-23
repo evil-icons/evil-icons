@@ -1,5 +1,5 @@
 /*
- * Evil Icons 1.7.5
+ * Evil Icons 1.7.7
  * http://evil-icons.io
  * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
  * Copyright 2014-2015 Alexander Madyankin <alexander@madyankin.name>, Roman Shamin <al4emist.artway@gmail.com>

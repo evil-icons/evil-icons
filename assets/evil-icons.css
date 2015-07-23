@@ -27,6 +27,7 @@
   height: 100%;
   background: inherit;
   fill: inherit;
+  pointer-events: none; /* Do not catch pointer events */
   transform: translateX(0); /* Crisp fix for non-retina */
   -ms-transform: translate(0.5px, -0.3px); /* Crisp fix for IE */
 }
