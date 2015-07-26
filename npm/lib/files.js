@@ -4,9 +4,16 @@ import path from 'path';
 const iconsPath = path.resolve(__dirname, '../assets/icons');
 let iconsDirs   = [iconsPath];
 
+function fileExists(file) {
+  try {
+    return fs.statSync(file);
+  } catch (e) {
+    return false;
+  }
+}
+
 function existingFiles(files) {
-  // FIXME: fs.existsSync is deprecated
-  return files.filter(file => fs.existsSync(file));
+  return files.filter(file => fileExists(file));
 }
 
 function normalizeNames(icons) {
