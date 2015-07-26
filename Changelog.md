@@ -1,3 +1,6 @@
+## v1.7.7
+* Fixed click events #65
+
 ## v1.7.6
 * Fixed libxmljs fail
 
