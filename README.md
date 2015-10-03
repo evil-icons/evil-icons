@@ -44,15 +44,8 @@ Use the [Gulp plugin].
 Just include the assets into your page from CDN:
 
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.js"></script>
-```
-
-or
-
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/evil-icons/1.7.2/evil-icons.min.css">
-<script src="//cdn.jsdelivr.net/evil-icons/1.7.2/evil-icons.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.7.8/evil-icons.min.css">
+<script src="https://cdn.jsdelivr.net/evil-icons/1.7.8/evil-icons.min.js"></script>
 ```
 
 
