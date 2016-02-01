@@ -23,6 +23,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 * [CDN](#cdn)
 * [Rails](#rails)
 * [Sinatra](#sinatra)
+* [Middleman](#middleman)
 * [npm](#npm)
 * [React](#react)
 * [Styling](#styling)
@@ -138,6 +139,45 @@ Finally, add the Evil Icons require to your `application.css`:
 Also, you can take a look at [example app] by [@aderyabin].
 [example app]: https://github.com/aderyabin/evil_icons_sinatra_example/
 [@aderyabin]: https://github.com/aderyabin
+
+
+### Middleman
+
+Add the `'evil_icons'` gem to your Gemfile:
+```ruby
+gem 'evil_icons'
+```
+
+Add the Evil Icons require to your main css file eg.
+`source/stylesheets/styles.css``:
+
+```css
+/*
+ *= require evil-icons
+ */
+```
+
+Add following to your `config.rb` to register Evil Icons helpers:
+
+```ruby
+require 'evil_icons'
+helpers EvilIcons::Helpers
+```
+
+Next, you have to render evil-icons sprite in your layout similar to the
+[Rails usage](#rails):
+
+```erb
+<%= evil_icons_sprite %>
+```
+
+And finally `evil_icon` helper renders icons just like with the [Rails](#rails):
+
+```erb
+<%= evil_icon 'ei-search' %>
+<%= evil_icon 'ei-arrow-right', size: :m %>
+<%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
+```
 
 
 ## npm
