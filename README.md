@@ -162,6 +162,10 @@ Add following to your `config.rb` to register Evil Icons helpers:
 ```ruby
 require 'evil_icons'
 helpers EvilIcons::Helpers
+
+after_configuration do
+  sprockets.append_path(EvilIcons.assets_dir)
+end
 ```
 
 Next, you have to render evil-icons sprite in your layout similar to the
