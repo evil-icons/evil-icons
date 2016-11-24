@@ -16,6 +16,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 [Roman Shamin]:         https://twitter.com/romanshamin
 
 ## Usage
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/outpunk/evil-icons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 * [Supported browsers](#supported-browsers)
 * [Grunt](#grunt)
