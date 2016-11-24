@@ -82,9 +82,9 @@ Next, you have to render the evil-icons sprite in your template (or, in your lay
 Finally, you can render the icon using the `evil_icon` helper.
 Here are some examples:
 ```erb
-<%= evil_icon 'ei-search' %>
-<%= evil_icon 'ei-arrow-right', size: :m %>
-<%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
+<%= evil_icon 'search' %>
+<%= evil_icon 'arrow-right', size: :m %>
+<%= evil_icon 'envelope', size: :l, class: "custom-class" %>
 ```
 
 
@@ -112,9 +112,9 @@ Next, you have to render the evil-icons sprite in your template (or, in your lay
 Finally, you can render the icon using the `evil_icon` helper.
 Here are some examples:
 ```erb
-<%= evil_icon 'ei-search' %>
-<%= evil_icon 'ei-arrow-right', size: :m %>
-<%= evil_icon 'ei-envelope', size: :l, class: "custom-class" %>
+<%= evil_icon 'search' %>
+<%= evil_icon 'arrow-right', size: :m %>
+<%= evil_icon 'envelope', size: :l, class: "custom-class" %>
 ```
 
 In order to use the stylesheets, you have to add Sprockets to your application.

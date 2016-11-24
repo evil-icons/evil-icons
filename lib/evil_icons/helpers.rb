@@ -6,7 +6,8 @@ module EvilIcons
     end
 
     def evil_icon(name, options = {})
-      size  = options[:size] ? "icon--#{options[:size]}" : ''
+      name = "ei-#{name}" unless name.include?('ei-')
+      size = options[:size] ? "icon--#{options[:size]}" : ''
       options[:class] = "icon icon--#{name} #{size} #{options[:class]}"
 
       icon = "<svg class='icon__cnt'><use xlink:href='##{name}-icon'/></svg>"
