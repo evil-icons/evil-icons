@@ -19,7 +19,7 @@
     var klass   = "icon icon--" + name + " " + size + " " + (options.class || "");
 
 
-    var icon =  "<svg class='icon__cnt'>" +
+    var icon =  "<svg class='icon__cnt' width='0' height='0'>" +
                   "<use xlink:href='#" + name + "-icon' />" +
                 "</svg>";
 
