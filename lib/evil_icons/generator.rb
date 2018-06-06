@@ -1,6 +1,7 @@
 require "nokogiri"
 require "erb"
 require "evil_icons"
+require "date"
 
 module EvilIcons
 
