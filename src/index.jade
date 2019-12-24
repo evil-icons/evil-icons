@@ -15,11 +15,11 @@ html(itemscope itemtype="http://schema.org/Code")
     meta(itemprop="name"            content=data.title)
     meta(itemprop="codeRepository"  content=data.repo)
     meta(itemprop="description"     content=data.longDescription)
-    meta(itemprop="url"             content="http://evil-icons.io")
+    meta(itemprop="url"             content="https://evil-icons.io")
 
     meta(property="og:title"        content=data.title)
     meta(property="og:description"  content=data.longDescription)
-    meta(property="og:url"          content="http://evil-icons.io")
+    meta(property="og:url"          content="https://evil-icons.io")
     meta(property="og:site_name"    content=data.title)
     meta(property="og:type"         content="website")
     meta(property="og:image"        content=data.image)
@@ -36,7 +36,7 @@ html(itemscope itemtype="http://schema.org/Code")
     link(rel="apple-touch-icon" sizes="120x120" href="/assets/images/touch-icon-iphone-retina.png")
     link(rel="apple-touch-icon" sizes="152x152" href="/assets/images/touch-icon-ipad-retina.png")
 
-    link(rel="yandex-tableau-widget" href="http://evil-icons.io/manifest.json")
+    link(rel="yandex-tableau-widget" href="https://evil-icons.io/manifest.json")
 
     link(rel="stylesheet" href="/assets/app.css")
 
@@ -78,6 +78,7 @@ html(itemscope itemtype="http://schema.org/Code")
       h1
         | Evil Icons
         sup v.#{version}
+      
       p
         | Simple and clean SVG icon pack with the code to support Rails, Sprockets, Node.js,
         = " "
@@ -85,13 +86,14 @@ html(itemscope itemtype="http://schema.org/Code")
         | ,&nbsp;
         a(href="https://github.com/outpunk/grunt-evil-icons") Grunt
         | &nbsp;and CDN.
+
       .likes
         .likes__gh
-          iframe(src="http://ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="100" frameborder="0" scrolling="0" allowTransparency="true")
+          iframe(src="//ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="100" frameborder="0" scrolling="0" allowTransparency="true")
         .likes__fb
-          div(class="fb-like" data-href="http://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
+          div(class="fb-like" data-href="https://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
         .likes__tw
-          a(href="https://twitter.com/share" class="twitter-share-button" data-via="evilmartians" data-url="http://evil-icons.io" data-text=data.shortDescription)
+          a(href="https://twitter.com/share" class="twitter-share-button" data-via="evilmartians" data-url="https://evil-icons.io" data-text=data.shortDescription)
 
       .header__btn
         a.btn.btn--accent(href="#{data.repo}#readme" data-block="readme") Getting Started
@@ -144,11 +146,11 @@ html(itemscope itemtype="http://schema.org/Code")
       p Support us:
       .likes
         .likes__gh
-          iframe(src="http://ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="100" frameborder="0" scrolling="0" allowTransparency="true")
+          iframe(src="//ghbtns.com/github-btn.html?user=outpunk&repo=evil-icons&type=watch&count=true" height="20" width="100" frameborder="0" scrolling="0" allowTransparency="true")
         .likes__fb
-          div(class="fb-like" data-href="http://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
+          div(class="fb-like" data-href="https://evil-icons.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true")
         .likes__tw
-          a(href="https://twitter.com/share" class="twitter-share-button" data-via="evilmartians" data-url="http://evil-icons.io" data-text=data.shortDescription)
+          a(href="https://twitter.com/share" class="twitter-share-button" data-via="evilmartians" data-url="https://evil-icons.io" data-text=data.shortDescription)
 
 
 
@@ -174,5 +176,5 @@ html(itemscope itemtype="http://schema.org/Code")
 
     #fb-root
 
-    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
     script(src="/assets/app.js" defer)
