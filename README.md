@@ -33,12 +33,10 @@ We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4
 http://caniuse.com/#search=inline%20svg
 
 ### Grunt
-Use the [Grunt plugin].
-[Grunt plugin]: https://github.com/outpunk/grunt-evil-icons
+Use the [Grunt plugin](https://github.com/outpunk/grunt-evil-icons)
 
 ### Gulp
-Use the [Gulp plugin].
-[Gulp plugin]: https://github.com/outpunk/gulp-evil-icons
+Use the [Gulp plugin](https://github.com/outpunk/gulp-evil-icons)
 
 ### CDN
 
@@ -136,9 +134,7 @@ Finally, add the Evil Icons require to your `application.css`:
  */
 ```
 
-Also, you can take a look at [example app] by [@aderyabin].
-[example app]: https://github.com/aderyabin/evil_icons_sinatra_example/
-[@aderyabin]: https://github.com/aderyabin
+Also, you can take a look at [example app](https://github.com/aderyabin/evil_icons_sinatra_example/) by [@aderyabin](https://github.com/aderyabin).
 
 
 ### Middleman
