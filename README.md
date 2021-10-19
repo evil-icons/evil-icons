@@ -1,8 +1,8 @@
-[![Circle CI](https://circleci.com/gh/outpunk/evil-icons.svg?style=svg)](https://circleci.com/gh/outpunk/evil-icons)
-
 ![](http://evil-icons.io/assets/images/evil-icons.png)
 
-Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Ruby gem, a Node.js package and Grunt/Gulp plugins. Just use icon names with your templates and styles — and all the rest will be done automagically.
+Free ‘plug and play’ set of SVG icons designed specifically for web projects. Available as a Ruby gem, a Node.js package and 
+
+/Gulp plugins. Just use icon names with your templates and styles — and all the rest will be done automagically.
 
 [evil-icons.io](http://evil-icons.io)
 
@@ -12,7 +12,7 @@ Made by [Alexander Madyankin] and [Roman Shamin].
 <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-[Alexander Madyankin]:  https://twitter.com/outpunk
+[Alexander Madyankin]:  https://twitter.com/madyankin
 [Roman Shamin]:         https://twitter.com/romanshamin
 
 ## Usage
@@ -33,10 +33,10 @@ We support IE 9+, Firefox, Chrome, Safari (desktop and mobile), Opera, Android 4
 http://caniuse.com/#search=inline%20svg
 
 ### Grunt
-Use the [Grunt plugin](https://github.com/outpunk/grunt-evil-icons)
+Use the [Grunt plugin](https://github.com/evil-icons/grunt-evil-icons)
 
 ### Gulp
-Use the [Gulp plugin](https://github.com/outpunk/gulp-evil-icons)
+Use the [Gulp plugin](https://github.com/evil-icons/gulp-evil-icons)
 
 ### CDN
 
